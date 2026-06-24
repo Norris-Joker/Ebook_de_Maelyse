@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK Auto — Garage automobile à Brignais | Entretien, réparation, pneus</title>
+<meta name="description" content="Garage SK Auto à Brignais (69) : entretien, réparation, montage de pneus, vente de véhicules. Note de 5,0 sur 92 avis. Devis honnête, équipe réactive.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23211F1C'/%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23E2762B' stroke-width='6'/%3E%3Cpath d='M50 16v14M50 70v14M84 50h-14M30 50H16M73.6 26.4l-9.9 9.9M36.3 63.7l-9.9 9.9M73.6 73.6l-9.9-9.9M36.3 36.3l-9.9-9.9' stroke='%23F4EFE3' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='50' r='13' fill='%23F4EFE3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "SK Auto",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Parc Actisud, 216 Rue Général de Gaulle",
+    "addressLocality": "Brignais",
+    "postalCode": "69530",
+    "addressRegion": "Rhône",
+    "addressCountry": "FR"
+  },
+  "telephone": "+33661272893",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"12:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"14:00","closes":"19:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "92"
+  },
+  "priceRange": "€€"
+}
+</script>
+<style>
+:root{
+  --graphite:#211F1C;
+  --graphite-light:#2D2B26;
+  --paper:#F4EFE3;
+  --paper-dim:#EAE2CC;
+  --amber:#E2762B;
+  --amber-dark:#B85A1C;
+  --petrol:#1F4E4A;
+  --petrol-light:#2E6F69;
+  --steel:#6B6862;
+  --steel-light:#9A9690;
+  --ink:#211F1C;
+  --cream:#F4EFE3;
+  --radius:10px;
+  --maxw:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;}
+body{
+  font-family:'Work Sans',sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.01em;line-height:1.12;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.mono{font-family:'JetBrains Mono',monospace;}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12.5px;
+  font-weight:600;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--amber-dark);
+}
+section{padding:88px 0;}
+@media(max-width:720px){section{padding:60px 0;}}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(244,239,227,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(33,31,28,0.08);
+}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;letter-spacing:0.02em;}
+.logo .gear{width:30px;height:30px;color:var(--amber);flex-shrink:0;}
+.logo span{color:var(--petrol);}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links a{font-size:14.5px;font-weight:500;position:relative;padding:6px 0;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--amber);transition:width 0.25s ease;}
+.nav-links a:hover::after{width:100%;}
+.nav-call{
+  display:flex;align-items:center;gap:8px;
+  background:var(--graphite);color:var(--paper);
+  padding:10px 18px;border-radius:30px;
+  font-size:14px;font-weight:600;
+  transition:transform 0.2s ease, background 0.2s ease;
+}
+.nav-call:hover{background:var(--amber-dark);transform:translateY(-1px);}
+.burger{display:none;flex-direction:column;gap:5px;width:32px;height:32px;align-items:center;justify-content:center;z-index:110;}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);transition:all 0.25s ease;}
+.burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.burger.active span:nth-child(2){opacity:0;}
+.burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+@media(max-width:880px){
+  .nav-links{
+    position:fixed;top:72px;left:0;right:0;bottom:0;
+    background:var(--paper);
+    flex-direction:column;justify-content:flex-start;
+    padding:40px 24px;gap:8px;
+    transform:translateX(100%);
+    transition:transform 0.32s ease;
+  }
+  .nav-links.open{transform:translateX(0);}
+  .nav-links a{width:100%;font-size:19px;padding:14px 4px;border-bottom:1px solid rgba(33,31,28,0.08);}
+  .nav-call{margin-top:14px;justify-content:center;width:100%;}
+  .burger{display:flex;}
+}
+
+/* ===== HERO ===== */
+.hero{padding:64px 0 80px;position:relative;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);margin:14px 0 18px;}
+.hero h1 .hl{color:var(--amber-dark);}
+.hero p.lead{font-size:18px;color:#454340;max-width:480px;margin-bottom:30px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 26px;border-radius:30px;
+  font-weight:600;font-size:15px;
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary{background:var(--amber);color:var(--graphite);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(226,118,43,0.35);}
+.btn-ghost{border:1.5px solid var(--graphite);color:var(--graphite);}
+.btn-ghost:hover{background:var(--graphite);color:var(--paper);}
+.btn-petrol{background:var(--petrol);color:var(--paper);}
+.btn-petrol:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,78,74,0.35);}
+
+/* ticket */
+.ticket-wrap{position:relative;}
+.ticket{
+  position:relative;
+  background:var(--graphite);
+  color:var(--paper);
+  border-radius:14px;
+  padding:30px 28px 36px;
+  box-shadow:0 18px 40px rgba(33,31,28,0.22);
+}
+.ticket::after{
+  content:"";position:absolute;left:0;right:0;bottom:-11px;height:22px;
+  background-image:
+    linear-gradient(135deg,var(--paper) 50%, transparent 50%),
+    linear-gradient(225deg,var(--paper) 50%, transparent 50%);
+  background-size:22px 22px;background-position:0 0,11px 0;background-repeat:repeat-x;
+}
+.ticket-top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px dashed rgba(244,239,227,0.25);padding-bottom:16px;margin-bottom:16px;}
+.ticket-top .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--steel-light);text-transform:uppercase;}
+.ticket-top .name{font-family:'Oswald',sans-serif;font-size:22px;font-weight:600;margin-top:4px;}
+.status-pill{
+  display:flex;align-items:center;gap:7px;
+  font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;
+  padding:6px 12px;border-radius:20px;background:rgba(244,239,227,0.1);
+}
+.status-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--steel-light);}
+.status-pill.open .dot{background:#7FBF6A;box-shadow:0 0 0 3px rgba(127,191,106,0.25);}
+.status-pill.closed .dot{background:#D9694F;}
+.ticket-row{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:13.5px;padding:7px 0;color:#D8D3C5;}
+.ticket-row b{color:var(--paper);font-weight:600;}
+.ticket-rating{display:flex;align-items:baseline;gap:10px;margin-top:18px;}
+.ticket-rating .num{font-family:'Oswald',sans-serif;font-size:38px;font-weight:700;color:var(--amber);}
+.ticket-rating .stars{color:var(--amber);font-size:14px;letter-spacing:2px;}
+.ticket-rating .count{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--steel-light);}
+.stamp{
+  position:absolute;top:-14px;right:-10px;
+  width:92px;height:92px;border-radius:50%;
+  border:3px solid var(--petrol-light);
+  color:var(--petrol-light);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+  letter-spacing:0.05em;text-align:center;text-transform:uppercase;
+  transform:rotate(-16deg);
+  background:rgba(46,111,105,0.06);
+  line-height:1.3;
+}
+@media(max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:44px;}
+  .ticket-wrap{max-width:420px;margin:0 auto;}
+}
+
+/* ===== TIRE DIVIDER ===== */
+.tread{height:14px;background-image:repeating-linear-gradient(115deg, var(--graphite) 0 8px, var(--paper-dim) 8px 16px);}
+
+/* ===== STATS ===== */
+.stats{background:var(--graphite);color:var(--paper);padding:54px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center;}
+.stat-num{font-family:'Oswald',sans-serif;font-size:clamp(2.2rem,5vw,3rem);font-weight:700;color:var(--amber);}
+.stat-label{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.06em;color:var(--steel-light);text-transform:uppercase;margin-top:6px;}
+@media(max-width:640px){.stats-grid{grid-template-columns:1fr;gap:28px;}}
+
+/* ===== SECTION HEADINGS ===== */
+.sec-head{max-width:620px;margin-bottom:48px;}
+.sec-head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-top:10px;}
+.sec-head p{color:#454340;font-size:16px;margin-top:12px;}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+
+/* ===== SERVICES ===== */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc-card{
+  background:var(--cream);border:1px solid rgba(33,31,28,0.1);
+  border-radius:var(--radius);padding:26px 24px;
+  transition:transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.svc-card:hover{transform:translateY(-5px);border-color:var(--amber);box-shadow:0 14px 28px rgba(33,31,28,0.1);}
+.svc-icon{
+  width:46px;height:46px;border-radius:10px;background:rgba(226,118,43,0.12);
+  display:flex;align-items:center;justify-content:center;color:var(--amber-dark);font-size:19px;margin-bottom:16px;
+}
+.svc-card h3{font-size:16px;text-transform:none;letter-spacing:0;font-weight:600;margin-bottom:6px;}
+.svc-card p{font-size:14px;color:#5C5A55;}
+@media(max-width:880px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.services-grid{grid-template-columns:1fr;}}
+
+/* ===== ABOUT ===== */
+.about{background:var(--petrol);color:var(--paper);}
+.about .eyebrow{color:#9FD4C9;}
+.about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:start;}
+.about h2{color:var(--paper);}
+.about p.lead{font-size:17px;color:#DCE9E6;margin:18px 0 20px;max-width:520px;}
+.tag-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.tag{
+  font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;
+  padding:8px 14px;border-radius:20px;border:1px solid rgba(244,239,227,0.3);color:#E8E2D2;
+}
+.about-card{background:rgba(244,239,227,0.07);border:1px solid rgba(244,239,227,0.18);border-radius:var(--radius);padding:24px;}
+.about-card h3{font-size:14px;color:var(--paper);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px;}
+.about-card ul{list-style:none;font-size:14.5px;color:#DCE9E6;display:flex;flex-direction:column;gap:10px;}
+.about-card ul li{display:flex;gap:10px;align-items:flex-start;}
+.about-card ul li i{color:var(--amber);margin-top:3px;font-size:13px;}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr;gap:32px;}}
+
+/* ===== REVIEWS ===== */
+.reviews-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px;flex-wrap:wrap;}
+.reviews-score{display:flex;align-items:center;gap:14px;background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:30px;padding:10px 20px;}
+.reviews-score .n{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;}
+.reviews-score .stars{color:var(--amber-dark);font-size:14px;}
+.reviews-score .sub{font-size:12.5px;color:#6B6862;font-family:'JetBrains Mono',monospace;}
+.testi-viewport{overflow:hidden;position:relative;}
+.testi-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;}
+.testi-track::-webkit-scrollbar{display:none;}
+.testi-card{
+  scroll-snap-align:start;flex:0 0 100%;max-width:340px;
+  background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:var(--radius);
+  padding:24px;display:flex;flex-direction:column;gap:14px;
+}
+@media(min-width:640px){.testi-card{flex:0 0 calc(50% - 9px);}}
+@media(min-width:980px){.testi-card{flex:0 0 calc(33.333% - 12px);}}
+.testi-stars{color:var(--amber-dark);font-size:13px;}
+.testi-text{font-size:14.5px;color:#3A3835;flex:1;}
+.testi-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(33,31,28,0.08);padding-top:12px;}
+.testi-name{font-weight:600;font-size:14px;}
+.testi-meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#7A776F;}
+.testi-controls{display:flex;justify-content:center;gap:16px;align-items:center;margin-top:24px;}
+.testi-arrow{
+  width:40px;height:40px;border-radius:50%;border:1px solid rgba(33,31,28,0.18);
+  display:flex;align-items:center;justify-content:center;transition:background 0.2s ease,color 0.2s ease;
+}
+.testi-arrow:hover{background:var(--graphite);color:var(--paper);}
+.testi-dots{display:flex;gap:7px;}
+.testi-dot{width:7px;height:7px;border-radius:50%;background:rgba(33,31,28,0.2);transition:background 0.2s ease,transform 0.2s ease;}
+.testi-dot.active{background:var(--amber-dark);transform:scale(1.3);}
+
+/* ===== PRACTICAL INFO ===== */
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.info-card{background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:var(--radius);padding:26px 24px;}
+.info-card h3{font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px;color:var(--petrol);}
+.info-card h3 i{color:var(--amber-dark);}
+.hours-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;border-bottom:1px solid rgba(33,31,28,0.06);}
+.hours-row:last-child{border-bottom:none;}
+.hours-row .day{font-weight:500;}
+.hours-row .time{font-family:'JetBrains Mono',monospace;font-size:13px;color:#5C5A55;}
+.hours-row.today{background:rgba(226,118,43,0.08);margin:0 -12px;padding:8px 12px;border-radius:6px;border-bottom:none;}
+.hours-row.today .day{color:var(--amber-dark);}
+.pill-list{display:flex;flex-wrap:wrap;gap:10px;}
+.pill-list .pill{display:flex;align-items:center;gap:8px;font-size:13.5px;background:var(--paper-dim);padding:9px 14px;border-radius:20px;}
+.pill-list .pill i{color:var(--amber-dark);font-size:13px;}
+@media(max-width:760px){.infos-grid{grid-template-columns:1fr;}}
+
+/* ===== CONTACT ===== */
+.contact{background:var(--graphite);color:var(--paper);}
+.contact .eyebrow{color:#B5AFA0;}
+.contact h2{color:var(--paper);}
+.contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px;margin-top:32px;}
+.contact-block{display:flex;gap:14px;margin-bottom:22px;}
+.contact-block i{width:38px;height:38px;border-radius:9px;background:rgba(226,118,43,0.16);color:var(--amber);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;}
+.contact-block .t{font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#A6A095;margin-bottom:4px;}
+.contact-block .v{font-size:16px;font-weight:500;}
+.contact-block .v a:hover{color:var(--amber);}
+.map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(244,239,227,0.15);min-height:300px;}
+.map-wrap iframe{width:100%;height:100%;min-height:300px;border:0;display:block;}
+@media(max-width:880px){.contact-grid{grid-template-columns:1fr;}}
+
+/* ===== FOOTER ===== */
+footer{background:var(--graphite);color:#9C9789;padding:28px 0;border-top:1px solid rgba(244,239,227,0.08);}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;}
+.foot-row .logo{color:var(--paper);font-size:15px;}
+.foot-row .logo .gear{color:var(--amber);width:22px;height:22px;}
+
+/* ===== MOBILE CALL BUTTON ===== */
+.mobile-call-btn{display:none;}
+@media(max-width:720px){
+  .mobile-call-btn{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    position:fixed;bottom:18px;left:18px;right:18px;z-index:90;
+    background:var(--amber);color:var(--graphite);
+    padding:15px;border-radius:30px;font-weight:600;font-size:15px;
+    box-shadow:0 10px 26px rgba(33,31,28,0.3);
+  }
+  body{padding-bottom:78px;}
+}
+
+/* ===== RDV SECTION ===== */
+.rdv{background:var(--paper-dim);}
+.rdv .eyebrow{color:var(--amber-dark);}
+
+.rdv-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
+@media(max-width:880px){.rdv-grid{grid-template-columns:1fr;gap:32px;}}
+
+/* CTA rapides */
+.rdv-quick{display:flex;flex-direction:column;gap:14px;}
+.rdv-quick-title{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;}
+.rdv-cta-card{
+  display:flex;align-items:center;gap:16px;
+  background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:var(--radius);
+  padding:18px 20px;
+  transition:transform 0.2s ease,box-shadow 0.2s ease,border-color 0.2s ease;
+  text-decoration:none;color:var(--ink);
+}
+.rdv-cta-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(33,31,28,0.1);border-color:var(--amber);}
+.rdv-cta-icon{
+  width:44px;height:44px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
+}
+.rdv-cta-icon.tel{background:rgba(226,118,43,0.12);color:var(--amber-dark);}
+.rdv-cta-body .head{font-weight:700;font-size:15px;margin-bottom:2px;}
+.rdv-cta-body .sub{font-size:13px;color:#6B6862;}
+.rdv-or{display:flex;align-items:center;gap:10px;color:var(--steel);font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.08em;margin:4px 0;}
+.rdv-or::before,.rdv-or::after{content:"";flex:1;height:1px;background:rgba(33,31,28,0.1);}
+
+/* Formulaire */
+.rdv-form-wrap{
+  background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:14px;
+  padding:32px 30px;
+  box-shadow:0 8px 24px rgba(33,31,28,0.07);
+}
+.rdv-form-wrap h3{font-size:18px;margin-bottom:4px;}
+.rdv-form-wrap .form-sub{font-size:13.5px;color:#6B6862;margin-bottom:24px;}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:560px){.form-row{grid-template-columns:1fr;}}
+
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+.field label{font-size:12.5px;font-weight:600;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.07em;color:var(--petrol);}
+.field input,
+.field select,
+.field textarea{
+  font-family:'Work Sans',sans-serif;
+  font-size:15px;
+  border:1.5px solid rgba(33,31,28,0.15);
+  border-radius:8px;
+  padding:11px 14px;
+  background:var(--paper);
+  color:var(--ink);
+  transition:border-color 0.2s ease,box-shadow 0.2s ease;
+  outline:none;
+  width:100%;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--amber);
+  box-shadow:0 0 0 3px rgba(226,118,43,0.15);
+}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6862' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:calc(100% - 14px) 50%;}
+.field textarea{resize:vertical;min-height:100px;}
+
+.form-hint{font-size:12px;color:#9A9690;font-family:'JetBrains Mono',monospace;}
+
+.form-submit{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:14px;border-radius:30px;
+  background:var(--graphite);color:var(--paper);
+  font-family:'Work Sans',sans-serif;font-size:15px;font-weight:600;
+  cursor:pointer;border:none;
+  margin-top:6px;
+  transition:background 0.2s ease,transform 0.2s ease,box-shadow 0.2s ease;
+}
+.form-submit:hover{background:var(--amber-dark);transform:translateY(-1px);box-shadow:0 8px 20px rgba(184,90,28,0.3);}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none;}
+
+/* Success state */
+.form-success{
+  display:none;
+  flex-direction:column;align-items:center;text-align:center;
+  gap:14px;padding:20px 0;
+}
+.form-success .check{
+  width:56px;height:56px;border-radius:50%;
+  background:rgba(31,78,74,0.12);color:var(--petrol);
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.form-success h4{font-size:18px;}
+.form-success p{font-size:14px;color:#5C5A55;}
+
+.reveal{opacity:0;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-wrap">
+    <a href="#hero" class="logo">
+      <svg class="gear" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="7"/>
+        <path d="M50 14v16M50 70v16M86 50h-16M30 50H14M75.6 24.4l-11.3 11.3M35.7 64.3l-11.3 11.3M75.6 75.6l-11.3-11.3M35.7 35.7l-11.3-11.3" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="50" cy="50" r="15" fill="currentColor"/>
+      </svg>
+      SK <span>AUTO</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">Le garage</a>
+      <a href="#avis">Avis clients</a>
+      <a href="#rdv">Rendez-vous</a>
+      <a href="#infos">Infos pratiques</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+33661272893" class="nav-call"><i class="fa-solid fa-phone"></i> 06 61 27 28 93</a>
+    </nav>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Garage indépendant · Brignais (69)</p>
+        <h1>Le garage qu'on recommande<br><span class="hl">les yeux fermés.</span></h1>
+        <p class="lead">Entretien, réparation, pneus et vente de véhicules à Brignais. Une équipe jeune, honnête et réactive — sans arnaque, sans jargon, au juste prix.</p>
+        <div class="hero-ctas">
+          <a href="#rdv" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Prendre rendez-vous</a>
+          <a href="tel:+33661272893" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> Appeler</a>
+        </div>
+      </div>
+      <div class="ticket-wrap">
+        <div class="stamp">vérifié<br>idgarages</div>
+        <div class="ticket">
+          <div class="ticket-top">
+            <div>
+              <p class="label">Bon de passage</p>
+              <p class="name">SK Auto</p>
+            </div>
+            <div class="status-pill" id="status-pill"><span class="dot"></span><span id="status-text">—</span></div>
+          </div>
+          <div class="ticket-row"><span>Adresse</span><b>Brignais, Rhône</b></div>
+          <div class="ticket-row"><span>Aujourd'hui</span><b id="today-hours">—</b></div>
+          <div class="ticket-row"><span>Paiement</span><b>CB · Chèque · Espèces</b></div>
+          <div class="ticket-rating">
+            <span class="num">5,0</span>
+            <div>
+              <div class="stars">★★★★★</div>
+              <div class="count">sur 92 avis vérifiés</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tread"></div>
+
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="reveal">
+        <div class="stat-num" data-target="92" data-decimals="0">0</div>
+        <div class="stat-label">Avis clients</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-num" data-target="5" data-decimals="1">0</div>
+        <div class="stat-label">Note moyenne / 5</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-num mono" style="font-size:clamp(1.6rem,4vw,2.2rem);">Brignais</div>
+        <div class="stat-label">Rhône (69)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Ce qu'on fait</p>
+        <h2>Nos services</h2>
+        <p>Du contrôle technique à la vente de véhicules, tout ce qu'il faut pour entretenir votre voiture sans multiplier les rendez-vous.</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc-card reveal">
+          <div class="svc-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Pré-contrôle technique</h3>
+          <p>On vérifie les points sensibles avant votre passage au contrôle, pour éviter les mauvaises surprises.</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>Présentation au contrôle technique</h3>
+          <p>Prise en charge complète de votre véhicule jusqu'au centre de contrôle.</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><i class="fa-solid fa-file-signature"></i></div>
+          <h3>Déclaration de sinistre</h3>
+          <p>On vous accompagne dans les démarches auprès de votre assurance.</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <h3>Transparence sur les pièces</h3>
+          <p>Pièces usagées et changées présentées sur demande. Rien de caché.</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><i class="fa-solid fa-car"></i></div>
+          <h3>Vente de véhicules</h3>
+          <p>Occasion et neuf, avec les réparations nécessaires faites avant la vente.</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7L5.6 5.6"/></svg>
+          </div>
+          <h3>Montage de pneus</h3>
+          <p>Pose et équilibrage, toutes saisons.</p>
+        </div>
+      </div>
+      <div class="services-grid" style="margin-top:20px;">
+        <div class="svc-card reveal">
+          <div class="svc-icon"><i class="fa-solid fa-volume-high"></i></div>
+          <h3>Montage d'accessoires</h3>
+          <p>Autoradio, GPS, alarmes — installation soignée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow reveal">Le garage</p>
+        <h2 class="reveal">Un atelier qui ne vous fait pas payer son ignorance de votre dossier.</h2>
+        <p class="lead reveal">Chez SK Auto, l'idée est simple : un entretien de qualité, à un tarif qui reste raisonnable. Pas de pièces gonflées, pas de devis surprise — on vous explique ce qu'on fait et pourquoi, avant de le faire.</p>
+        <div class="tag-list reveal">
+          <span class="tag">Véhicules de tourisme</span>
+          <span class="tag">SUV / 4x4</span>
+          <span class="tag">Camping-cars</span>
+          <span class="tag">Thermique essence / diesel</span>
+        </div>
+      </div>
+      <div class="about-card reveal">
+        <h3>En pratique</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Garage indépendant, présent sur idGarages.com depuis 2025</li>
+          <li><i class="fa-solid fa-check"></i> Expertise mécanique sur véhicules thermiques</li>
+          <li><i class="fa-solid fa-check"></i> Devis détaillé avant intervention</li>
+          <li><i class="fa-solid fa-check"></i> Pièces changées montrées sur demande</li>
+          <li><i class="fa-solid fa-check"></i> Parc Actisud — accès et stationnement faciles</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RDV / CONTACT FORM ===== -->
+  <section class="rdv" id="rdv">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow">On s'organise</p>
+        <h2>Prendre rendez-vous</h2>
+        <p>Appelez directement, écrivez sur WhatsApp ou remplissez le formulaire — on revient vers vous sous 24 h.</p>
+      </div>
+
+      <div class="rdv-grid">
+
+        <!-- Colonne gauche : accès rapides -->
+        <div class="rdv-quick reveal">
+          <p class="rdv-quick-title">Accès rapide</p>
+
+          <a href="tel:+33661272893" class="rdv-cta-card">
+            <div class="rdv-cta-icon tel"><i class="fa-solid fa-phone"></i></div>
+            <div class="rdv-cta-body">
+              <p class="head">Appeler le garage</p>
+              <p class="sub">06 61 27 28 93<br>Lun–Ven 8h–12h / 14h–19h · Sam 8h–14h</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="color:#9A9690;font-size:13px;margin-left:auto;"></i>
+          </a>
+
+          <div class="rdv-or">ou</div>
+
+          <!-- Lien WhatsApp -->
+          <a href="https://wa.me/33661272893?text=Bonjour%20SK%20Auto%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener" class="rdv-cta-card">
+            <div class="rdv-cta-icon" style="background:rgba(37,211,102,0.12);color:#1DA851;"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="rdv-cta-body">
+              <p class="head">WhatsApp</p>
+              <p class="sub">Message pré-rempli · réponse rapide</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="color:#9A9690;font-size:13px;margin-left:auto;"></i>
+          </a>
+
+          <div class="rdv-or">ou</div>
+
+          <div class="rdv-cta-card" style="cursor:default;pointer-events:none;opacity:0.7;">
+            <div class="rdv-cta-icon" style="background:rgba(226,118,43,0.12);color:var(--amber-dark);"><i class="fa-solid fa-envelope"></i></div>
+            <div class="rdv-cta-body">
+              <p class="head">Formulaire email</p>
+              <p class="sub">Réponse sous 24 h (hors week-end)</p>
+            </div>
+            <i class="fa-solid fa-arrow-down" style="color:#9A9690;font-size:13px;margin-left:auto;"></i>
+          </div>
+        </div>
+
+        <!-- Colonne droite : formulaire -->
+        <div class="rdv-form-wrap reveal">
+
+          <h3>Formulaire de demande</h3>
+          <p class="form-sub">On vous répond dans la journée (hors week-end).</p>
+
+          <div id="rdv-form-inner">
+            <div class="form-row">
+              <div class="field">
+                <label for="f-prenom">Prénom *</label>
+                <input type="text" id="f-prenom" name="prenom" placeholder="Marie" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="f-nom">Nom *</label>
+                <input type="text" id="f-nom" name="nom" placeholder="Dupont" required autocomplete="family-name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="f-tel">Téléphone *</label>
+                <input type="tel" id="f-tel" name="telephone" placeholder="06 12 34 56 78" required autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" placeholder="marie@exemple.fr" autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="f-marque">Marque du véhicule *</label>
+                <input type="text" id="f-marque" name="marque_vehicule" placeholder="Renault, Peugeot…" required>
+              </div>
+              <div class="field">
+                <label for="f-modele">Modèle & année</label>
+                <input type="text" id="f-modele" name="modele_annee" placeholder="Clio IV · 2018">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-service">Type de prestation</label>
+              <select id="f-service" name="prestation">
+                <option value="">— Choisir —</option>
+                <option>Entretien / révision</option>
+                <option>Réparation / panne</option>
+                <option>Changement de pneus</option>
+                <option>Pré-contrôle technique</option>
+                <option>Passage au contrôle technique</option>
+                <option>Déclaration de sinistre</option>
+                <option>Vente / achat de véhicule</option>
+                <option>Montage d'accessoires</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-dispo">Disponibilités souhaitées</label>
+              <input type="text" id="f-dispo" name="disponibilites" placeholder="Ex : mardi matin ou jeudi après-midi">
+            </div>
+
+            <div class="field">
+              <label for="f-message">Description du problème *</label>
+              <textarea id="f-message" name="message" rows="4" placeholder="Décrivez le symptôme, le bruit, la panne… Plus c'est précis, mieux on peut préparer votre rdv." required></textarea>
+              <span class="form-hint">Aucun jargon requis — décrivez ce que vous ressentez / entendez.</span>
+            </div>
+
+            <button type="button" class="form-submit" id="form-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Envoyer ma demande
+            </button>
+          </div>
+
+          <!-- Message de succès -->
+          <div class="form-success" id="form-success">
+            <div class="check"><i class="fa-solid fa-check"></i></div>
+            <h4>Demande envoyée !</h4>
+            <p>On a bien reçu votre message et on vous rappelle dans les plus brefs délais.<br>En cas d'urgence : <a href="tel:+33661272893" style="color:var(--amber-dark);font-weight:600;">06 61 27 28 93</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="avis">
+    <div class="container">
+      <div class="reviews-head">
+        <div class="sec-head reveal" style="margin-bottom:0;">
+          <p class="eyebrow">Ils nous font confiance</p>
+          <h2>Avis clients</h2>
+        </div>
+        <div class="reviews-score reveal">
+          <span class="n">5,0</span>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="sub">92 avis</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-viewport">
+        <div class="testi-track" id="testiTrack">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Venue pour changer plaquettes de freins et disques sur ma Twingo, l'équipe a été de très bon conseil, rapide et efficace. Une équipe sérieuse que je recommande les yeux fermés.</p>
+            <div class="testi-foot"><span class="testi-name">Wendy Jolivot</span><span class="testi-meta">Local guide · 18 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Garage sérieux, professionnel et particulièrement efficace. L'équipe est accueillante, à l'écoute et prend le temps d'expliquer clairement les interventions.</p>
+            <div class="testi-foot"><span class="testi-name">Morgane Mastruzzo</span><span class="testi-meta">Local guide · 40 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Appelé le mardi pour un rendez-vous le jeudi. Réparation de mon phare au top, et le garage a même contacté une casse pour trouver une pièce à petit budget.</p>
+            <div class="testi-foot"><span class="testi-name">Line Dubois</span><span class="testi-meta">Local guide · 39 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Équipe de passionnés au top, réactifs, à l'écoute et très pro. Travail bien fait dans un délai maîtrisé et à tarif attractif. Je leur confierai ma voiture à nouveau.</p>
+            <div class="testi-foot"><span class="testi-name">Vernay Clément</span><span class="testi-meta">9 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Pas facile de trouver un garage sérieux avec des tarifs raisonnables, mais ici j'ai eu une très bonne expérience : équipe professionnelle et transparente.</p>
+            <div class="testi-foot"><span class="testi-name">Raquel Dias</span><span class="testi-meta">Local guide · 9 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Travail réalisé avec professionnalisme et dans un délai rapide. Équipe sympathique et honnête, qui rend même le véhicule nettoyé. J'y reviendrai sans hésiter.</p>
+            <div class="testi-foot"><span class="testi-name">Augustin Détré</span><span class="testi-meta">Local guide · 46 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Venue pour un second devis, j'ai découvert que le premier garage voulait clairement m'arnaquer. Ici : transparence totale et conseils sincères. Rare et précieux.</p>
+            <div class="testi-foot"><span class="testi-name">Patricia Fiore</span><span class="testi-meta">7 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Service au top, très honnête, rapide et efficace. De nos jours c'est dur de trouver un garage aussi bien, donc je recommande fortement.</p>
+            <div class="testi-foot"><span class="testi-name">Inesa Arzumanyan</span><span class="testi-meta">Local guide · 15 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Super équipe de jeunes hyper serviables, compétents et rapides. Enfin un garage qui ne gonfle pas la note parce que vous êtes une femme et n'y comprenez rien en mécanique !</p>
+            <div class="testi-foot"><span class="testi-name">Adeline Aurouze</span><span class="testi-meta">2 avis</span></div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Remplacement de la chaîne de distribution sur ma 118d. Je recommande fortement ce garage, tarifs compétitifs et professionnels.</p>
+            <div class="testi-foot"><span class="testi-name">Mickael Dalpino</span><span class="testi-meta">Local guide · 101 avis</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-controls">
+        <button class="testi-arrow" id="testiPrev" aria-label="Avis précédent"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-arrow" id="testiNext" aria-label="Avis suivant"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="tread"></div>
+
+  <section id="infos">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Pratique</p>
+        <h2>Infos pratiques</h2>
+      </div>
+      <div class="infos-grid">
+        <div class="info-card reveal">
+          <h3><i class="fa-solid fa-clock"></i> Horaires d'ouverture</h3>
+          <div id="hours-table"></div>
+        </div>
+        <div class="info-card reveal">
+          <h3><i class="fa-solid fa-credit-card"></i> Moyens de paiement</h3>
+          <div class="pill-list">
+            <span class="pill"><i class="fa-solid fa-money-bill-wave"></i> Espèces (&lt; 1000 €)</span>
+            <span class="pill"><i class="fa-solid fa-credit-card"></i> Carte bancaire</span>
+            <span class="pill"><i class="fa-solid fa-money-check"></i> Chèque</span>
+          </div>
+          <h3 style="margin-top:24px;"><i class="fa-solid fa-universal-access"></i> Accessibilité</h3>
+          <div class="pill-list">
+            <span class="pill"><i class="fa-solid fa-square-parking"></i> Parking facile</span>
+            <span class="pill"><i class="fa-solid fa-bus"></i> Transport en commun proche</span>
+            <span class="pill"><i class="fa-solid fa-house"></i> Dépose à domicile possible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="eyebrow reveal">Nous trouver</p>
+      <h2 class="reveal">Contact</h2>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-block">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p class="t">Adresse</p>
+              <p class="v">Parc Actisud<br>216 Rue Général de Gaulle<br>69530 Brignais</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <p class="t">Téléphone</p>
+              <p class="v"><a href="tel:+33661272893">06 61 27 28 93</a></p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <p class="t">Aujourd'hui</p>
+              <p class="v" id="contact-today">—</p>
+            </div>
+          </div>
+          <a href="tel:+33661272893" class="btn btn-primary" style="margin-top:8px;"><i class="fa-solid fa-phone"></i> Appeler maintenant</a>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe src="https://www.google.com/maps?q=Parc+Actisud,+216+Rue+G%C3%A9n%C3%A9ral+de+Gaulle,+69530+Brignais&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation du garage SK Auto à Brignais"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container foot-row">
+    <span class="logo">
+      <svg class="gear" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="7"/>
+        <path d="M50 14v16M50 70v16M86 50h-16M30 50H14M75.6 24.4l-11.3 11.3M35.7 64.3l-11.3 11.3M75.6 75.6l-11.3-11.3M35.7 35.7l-11.3-11.3" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="50" cy="50" r="15" fill="currentColor"/>
+      </svg>
+      SK Auto — Brignais
+    </span>
+    <span>Parc Actisud, 216 Rue Général de Gaulle, 69530 Brignais · 06 61 27 28 93</span>
+  </div>
+</footer>
+
+<a href="tel:+33661272893" class="mobile-call-btn"><i class="fa-solid fa-phone"></i> Appeler le garage</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+
+/* ==========================================================
+   ⚙️  CONFIGURATION EMAILJS — À REMPLIR UNE SEULE FOIS
+   ----------------------------------------------------------
+   1. Créer un compte gratuit sur https://www.emailjs.com
+   2. Ajouter un "Email Service" (Gmail, Outlook…) → copier le Service ID
+   3. Créer un "Email Template" → copier le Template ID
+      Variables disponibles dans le template :
+        {{prenom}}, {{nom}}, {{telephone}}, {{email}},
+        {{marque_vehicule}}, {{modele_annee}}, {{prestation}},
+        {{disponibilites}}, {{message}}
+   4. Dans Account > API Keys → copier la Public Key
+   ========================================================== */
+const EMAILJS_PUBLIC_KEY  = 'VOTRE_PUBLIC_KEY';   // ex : "user_Abc123XYZ"
+const EMAILJS_SERVICE_ID  = 'VOTRE_SERVICE_ID';   // ex : "service_sk_auto"
+const EMAILJS_TEMPLATE_ID = 'VOTRE_TEMPLATE_ID';  // ex : "template_rdv_sk"
+
+// Initialisation EmailJS
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+/* ---------- Burger menu ---------- */
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+burger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  burger.classList.toggle('active');
+  burger.setAttribute('aria-expanded', isOpen);
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  burger.classList.remove('active');
+}));
+
+/* ---------- Opening hours logic ---------- */
+const HOURS = {
+  weekday: [[8*60,12*60],[14*60,19*60]],
+  saturday: [[8*60,14*60]],
+  sunday: []
+};
+const DAY_NAMES = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+
+function fmt(mins){
+  const h = Math.floor(mins/60).toString().padStart(2,'0');
+  const m = (mins%60).toString().padStart(2,'0');
+  return h + 'h' + (m === '00' ? '' : m);
+}
+function rangesForDay(day){
+  if(day === 0) return HOURS.sunday;
+  if(day === 6) return HOURS.saturday;
+  return HOURS.weekday;
+}
+function rangesLabel(ranges){
+  if(!ranges.length) return 'Fermé';
+  return ranges.map(r => fmt(r[0]) + ' – ' + fmt(r[1])).join(' / ');
+}
+function updateStatus(){
+  const now = new Date();
+  const day = now.getDay();
+  const mins = now.getHours()*60 + now.getMinutes();
+  const ranges = rangesForDay(day);
+  const isOpen = ranges.some(([s,e]) => mins >= s && mins < e);
+
+  const pill = document.getElementById('status-pill');
+  const text = document.getElementById('status-text');
+  pill.classList.toggle('open', isOpen);
+  pill.classList.toggle('closed', !isOpen);
+  text.textContent = isOpen ? 'Ouvert' : 'Fermé';
+
+  const label = rangesLabel(ranges);
+  document.getElementById('today-hours').textContent = label;
+  document.getElementById('contact-today').textContent = DAY_NAMES[day] + ' · ' + label;
+}
+function buildHoursTable(){
+  const today = new Date().getDay();
+  const order = [1,2,3,4,5,6,0];
+  const wrap = document.getElementById('hours-table');
+  wrap.innerHTML = order.map(d => {
+    const ranges = rangesForDay(d);
+    const isToday = d === today;
+    return '<div class="hours-row' + (isToday ? ' today' : '') + '">' +
+      '<span class="day">' + DAY_NAMES[d] + '</span>' +
+      '<span class="time">' + rangesLabel(ranges) + '</span>' +
+    '</div>';
+  }).join('');
+}
+updateStatus();
+buildHoursTable();
+setInterval(updateStatus, 60000);
+
+/* ---------- RDV Form — EmailJS ---------- */
+document.getElementById('form-submit-btn').addEventListener('click', async () => {
+  const prenom  = document.getElementById('f-prenom').value.trim();
+  const nom     = document.getElementById('f-nom').value.trim();
+  const tel     = document.getElementById('f-tel').value.trim();
+  const marque  = document.getElementById('f-marque').value.trim();
+  const message = document.getElementById('f-message').value.trim();
+
+  if (!prenom || !nom || !tel || !marque || !message) {
+    alert('Merci de remplir les champs obligatoires (*).');
+    return;
+  }
+
+  const btn = document.getElementById('form-submit-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Envoi en cours…';
+
+  const templateParams = {
+    prenom,
+    nom,
+    telephone:       document.getElementById('f-tel').value,
+    email:           document.getElementById('f-email').value,
+    marque_vehicule: marque,
+    modele_annee:    document.getElementById('f-modele').value,
+    prestation:      document.getElementById('f-service').value,
+    disponibilites:  document.getElementById('f-dispo').value,
+    message,
+  };
+
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+    showSuccess();
+  } catch (err) {
+    console.error('EmailJS error:', err);
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Envoyer ma demande';
+    alert('Une erreur est survenue lors de l\'envoi. Appelez-nous directement au 06 61 27 28 93.');
+  }
+});
+
+function showSuccess() {
+  document.getElementById('rdv-form-inner').style.display = 'none';
+  const s = document.getElementById('form-success');
+  s.style.display = 'flex';
+}
+
+/* ---------- Testimonial carousel ---------- */
+const track = document.getElementById('testiTrack');
+const cards = Array.from(track.children);
+const dotsWrap = document.getElementById('testiDots');
+let perView = window.innerWidth >= 980 ? 3 : window.innerWidth >= 640 ? 2 : 1;
+let pageCount = Math.ceil(cards.length / perView);
+let current = 0;
+
+function buildDots(){
+  dotsWrap.innerHTML = '';
+  pageCount = Math.ceil(cards.length / perView);
+  for(let i=0;i<pageCount;i++){
+    const d = document.createElement('div');
+    d.className = 'testi-dot' + (i===current ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  }
+}
+function goTo(i){
+  current = (i + pageCount) % pageCount;
+  const targetIndex = current * perView;
+  const card = cards[Math.min(targetIndex, cards.length-1)];
+  track.scrollTo({left: card.offsetLeft, behavior:'smooth'});
+  Array.from(dotsWrap.children).forEach((d,idx) => d.classList.toggle('active', idx===current));
+}
+document.getElementById('testiNext').addEventListener('click', () => goTo(current+1));
+document.getElementById('testiPrev').addEventListener('click', () => goTo(current-1));
+buildDots();
+
+let autoplay = setInterval(() => goTo(current+1), 5500);
+function pauseAutoplay(){ clearInterval(autoplay); }
+track.addEventListener('mouseenter', pauseAutoplay);
+track.addEventListener('touchstart', pauseAutoplay, {passive:true});
+
+window.addEventListener('resize', () => {
+  const newPerView = window.innerWidth >= 980 ? 3 : window.innerWidth >= 640 ? 2 : 1;
+  if(newPerView !== perView){ perView = newPerView; current = 0; buildDots(); }
+});
+
+/* ---------- GSAP animations ---------- */
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from('.hero-text > *', {y:22, opacity:0, duration:0.7, stagger:0.12, ease:'power2.out', delay:0.1});
+gsap.from('.ticket-wrap', {y:36, opacity:0, duration:0.8, ease:'power3.out', delay:0.3});
+gsap.from('.stamp', {scale:1.8, opacity:0, rotate:6, duration:0.6, delay:0.9, ease:'back.out(2.6)'});
+
+document.querySelectorAll('.reveal').forEach(el => {
+  gsap.to(el, {
+    opacity:1, y:0, duration:0.7, ease:'power2.out',
+    scrollTrigger:{trigger:el, start:'top 88%'}
+  });
+});
+gsap.set('.reveal', {y:20});
+
+document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+  const target = parseFloat(el.dataset.target);
+  const decimals = parseInt(el.dataset.decimals || '0');
+  const obj = {val:0};
+  ScrollTrigger.create({
+    trigger:el, start:'top 90%', once:true,
+    onEnter:() => gsap.to(obj, {
+      val:target, duration:1.3, ease:'power2.out',
+      onUpdate:() => { el.textContent = decimals ? obj.val.toFixed(decimals).replace('.',',') : Math.round(obj.val); }
+    })
+  });
+});
+
+gsap.utils.toArray('.svc-card').forEach((card,i) => {
+  gsap.from(card, {
+    y:24, opacity:0, duration:0.6, ease:'power2.out', delay:(i%3)*0.08,
+    scrollTrigger:{trigger:card, start:'top 90%'}
+  });
+});
+
+let lastScroll = window.scrollY;
+const headerEl = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  const cur = window.scrollY;
+  if(cur > lastScroll && cur > 140){
+    gsap.to(headerEl, {yPercent:-100, duration:0.3, ease:'power2.out'});
+  } else {
+    gsap.to(headerEl, {yPercent:0, duration:0.3, ease:'power2.out'});
+  }
+  lastScroll = cur;
+}, {passive:true});
+</script>
+</body>
+</html>
