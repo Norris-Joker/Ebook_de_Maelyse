@@ -1,1110 +1,1050 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SK Auto — Garage automobile à Brignais | Entretien, réparation, pneus</title>
-<meta name="description" content="Garage SK Auto à Brignais (69) : entretien, réparation, montage de pneus, vente de véhicules. Note de 5,0 sur 92 avis. Devis honnête, équipe réactive.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23211F1C'/%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23E2762B' stroke-width='6'/%3E%3Cpath d='M50 16v14M50 70v14M84 50h-14M30 50H16M73.6 26.4l-9.9 9.9M36.3 63.7l-9.9 9.9M73.6 73.6l-9.9-9.9M36.3 36.3l-9.9-9.9' stroke='%23F4EFE3' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='50' r='13' fill='%23F4EFE3'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AutoRepair",
-  "name": "SK Auto",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Parc Actisud, 216 Rue Général de Gaulle",
-    "addressLocality": "Brignais",
-    "postalCode": "69530",
-    "addressRegion": "Rhône",
-    "addressCountry": "FR"
-  },
-  "telephone": "+33661272893",
-  "openingHoursSpecification": [
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"12:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"14:00","closes":"19:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "92"
-  },
-  "priceRange": "€€"
-}
-</script>
-<style>
-:root{
-  --graphite:#211F1C;
-  --graphite-light:#2D2B26;
-  --paper:#F4EFE3;
-  --paper-dim:#EAE2CC;
-  --amber:#E2762B;
-  --amber-dark:#B85A1C;
-  --petrol:#1F4E4A;
-  --petrol-light:#2E6F69;
-  --steel:#6B6862;
-  --steel-light:#9A9690;
-  --ink:#211F1C;
-  --cream:#F4EFE3;
-  --radius:10px;
-  --maxw:1140px;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;scroll-padding-top:84px;}
-body{
-  font-family:'Work Sans',sans-serif;
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.01em;line-height:1.12;}
-a{color:inherit;text-decoration:none;}
-img{max-width:100%;display:block;}
-button{font-family:inherit;cursor:pointer;border:none;background:none;}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-.mono{font-family:'JetBrains Mono',monospace;}
-.eyebrow{
-  font-family:'JetBrains Mono',monospace;
-  font-size:12.5px;
-  font-weight:600;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--amber-dark);
-}
-section{padding:88px 0;}
-@media(max-width:720px){section{padding:60px 0;}}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pour Toi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ===== HEADER ===== */
-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(244,239,227,0.92);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid rgba(33,31,28,0.08);
-}
-.nav-wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
-.logo{display:flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;letter-spacing:0.02em;}
-.logo .gear{width:30px;height:30px;color:var(--amber);flex-shrink:0;}
-.logo span{color:var(--petrol);}
-.nav-links{display:flex;align-items:center;gap:30px;}
-.nav-links a{font-size:14.5px;font-weight:500;position:relative;padding:6px 0;}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--amber);transition:width 0.25s ease;}
-.nav-links a:hover::after{width:100%;}
-.nav-call{
-  display:flex;align-items:center;gap:8px;
-  background:var(--graphite);color:var(--paper);
-  padding:10px 18px;border-radius:30px;
-  font-size:14px;font-weight:600;
-  transition:transform 0.2s ease, background 0.2s ease;
-}
-.nav-call:hover{background:var(--amber-dark);transform:translateY(-1px);}
-.burger{display:none;flex-direction:column;gap:5px;width:32px;height:32px;align-items:center;justify-content:center;z-index:110;}
-.burger span{display:block;width:22px;height:2px;background:var(--ink);transition:all 0.25s ease;}
-.burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.burger.active span:nth-child(2){opacity:0;}
-.burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    :root {
+      --ink: #1a1018;
+      --blush: #c9a0a0;
+      --rose: #8b3a3a;
+      --cream: #faf7f4;
+      --mist: #ede5e0;
+      --gold: #b8956a;
+      --faded: #a09099;
+    }
 
-@media(max-width:880px){
-  .nav-links{
-    position:fixed;top:72px;left:0;right:0;bottom:0;
-    background:var(--paper);
-    flex-direction:column;justify-content:flex-start;
-    padding:40px 24px;gap:8px;
-    transform:translateX(100%);
-    transition:transform 0.32s ease;
-  }
-  .nav-links.open{transform:translateX(0);}
-  .nav-links a{width:100%;font-size:19px;padding:14px 4px;border-bottom:1px solid rgba(33,31,28,0.08);}
-  .nav-call{margin-top:14px;justify-content:center;width:100%;}
-  .burger{display:flex;}
-}
+    html, body { height: 100%; background: var(--ink); font-family: 'Jost', sans-serif; color: var(--cream); overflow: hidden; }
 
-/* ===== HERO ===== */
-.hero{padding:64px 0 80px;position:relative;overflow:hidden;}
-.hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;}
-.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);margin:14px 0 18px;}
-.hero h1 .hl{color:var(--amber-dark);}
-.hero p.lead{font-size:18px;color:#454340;max-width:480px;margin-bottom:30px;}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
-.btn{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 26px;border-radius:30px;
-  font-weight:600;font-size:15px;
-  transition:transform 0.2s ease, box-shadow 0.2s ease;
-}
-.btn-primary{background:var(--amber);color:var(--graphite);}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(226,118,43,0.35);}
-.btn-ghost{border:1.5px solid var(--graphite);color:var(--graphite);}
-.btn-ghost:hover{background:var(--graphite);color:var(--paper);}
-.btn-petrol{background:var(--petrol);color:var(--paper);}
-.btn-petrol:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,78,74,0.35);}
+    /* COVER */
+    #cover {
+      position: fixed; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: var(--ink);
+      z-index: 100;
+      transition: opacity 0.9s ease, transform 0.9s ease;
+      text-align: center; padding: 2rem;
+    }
+    #cover.hidden { opacity: 0; transform: scale(1.04); pointer-events: none; }
 
-/* ticket */
-.ticket-wrap{position:relative;}
-.ticket{
-  position:relative;
-  background:var(--graphite);
-  color:var(--paper);
-  border-radius:14px;
-  padding:30px 28px 36px;
-  box-shadow:0 18px 40px rgba(33,31,28,0.22);
-}
-.ticket::after{
-  content:"";position:absolute;left:0;right:0;bottom:-11px;height:22px;
-  background-image:
-    linear-gradient(135deg,var(--paper) 50%, transparent 50%),
-    linear-gradient(225deg,var(--paper) 50%, transparent 50%);
-  background-size:22px 22px;background-position:0 0,11px 0;background-repeat:repeat-x;
-}
-.ticket-top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px dashed rgba(244,239,227,0.25);padding-bottom:16px;margin-bottom:16px;}
-.ticket-top .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--steel-light);text-transform:uppercase;}
-.ticket-top .name{font-family:'Oswald',sans-serif;font-size:22px;font-weight:600;margin-top:4px;}
-.status-pill{
-  display:flex;align-items:center;gap:7px;
-  font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;
-  padding:6px 12px;border-radius:20px;background:rgba(244,239,227,0.1);
-}
-.status-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--steel-light);}
-.status-pill.open .dot{background:#7FBF6A;box-shadow:0 0 0 3px rgba(127,191,106,0.25);}
-.status-pill.closed .dot{background:#D9694F;}
-.ticket-row{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:13.5px;padding:7px 0;color:#D8D3C5;}
-.ticket-row b{color:var(--paper);font-weight:600;}
-.ticket-rating{display:flex;align-items:baseline;gap:10px;margin-top:18px;}
-.ticket-rating .num{font-family:'Oswald',sans-serif;font-size:38px;font-weight:700;color:var(--amber);}
-.ticket-rating .stars{color:var(--amber);font-size:14px;letter-spacing:2px;}
-.ticket-rating .count{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--steel-light);}
-.stamp{
-  position:absolute;top:-14px;right:-10px;
-  width:92px;height:92px;border-radius:50%;
-  border:3px solid var(--petrol-light);
-  color:var(--petrol-light);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
-  letter-spacing:0.05em;text-align:center;text-transform:uppercase;
-  transform:rotate(-16deg);
-  background:rgba(46,111,105,0.06);
-  line-height:1.3;
-}
-@media(max-width:920px){
-  .hero-grid{grid-template-columns:1fr;gap:44px;}
-  .ticket-wrap{max-width:420px;margin:0 auto;}
-}
+    .cover-date {
+      font-size: 0.65rem; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--gold);
+      opacity: 0.7; margin-bottom: 2.5rem;
+    }
+    .cover-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1; color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+    .cover-subtitle {
+      font-size: 0.72rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--faded);
+      margin-bottom: 4rem;
+    }
+    .cover-line { width: 50px; height: 1px; background: var(--gold); margin: 0 auto 4rem; opacity: 0.5; }
+    .cover-btn {
+      font-family: 'Jost', sans-serif; font-size: 0.7rem;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--cream); background: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 1rem 2.5rem; cursor: pointer;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .cover-btn:hover { border-color: var(--gold); color: var(--gold); }
 
-/* ===== TIRE DIVIDER ===== */
-.tread{height:14px;background-image:repeating-linear-gradient(115deg, var(--graphite) 0 8px, var(--paper-dim) 8px 16px);}
+    /* BOOK */
+    #book { display: flex; height: 100vh; opacity: 0; transition: opacity 0.8s ease 0.3s; }
+    #book.visible { opacity: 1; }
 
-/* ===== STATS ===== */
-.stats{background:var(--graphite);color:var(--paper);padding:54px 0;}
-.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center;}
-.stat-num{font-family:'Oswald',sans-serif;font-size:clamp(2.2rem,5vw,3rem);font-weight:700;color:var(--amber);}
-.stat-label{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.06em;color:var(--steel-light);text-transform:uppercase;margin-top:6px;}
-@media(max-width:640px){.stats-grid{grid-template-columns:1fr;gap:28px;}}
+    /* SIDEBAR */
+    #sidebar {
+      width: 230px; flex-shrink: 0;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 2.5rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+    }
+    .sidebar-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--blush); opacity: 0.8; }
+    nav { display: flex; flex-direction: column; gap: 0.2rem; margin-top: 2rem; }
+    .nav-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.65rem 0.75rem; border-radius: 4px;
+      cursor: pointer; font-size: 0.7rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--faded); border: none; background: none;
+      text-align: left; transition: color 0.25s, background 0.25s; width: 100%;
+    }
+    .nav-item .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--faded); flex-shrink: 0; transition: background 0.25s; }
+    .nav-item:hover { color: var(--cream); }
+    .nav-item.active { color: var(--cream); background: rgba(255,255,255,0.05); }
+    .nav-item.active .dot { background: var(--gold); }
+    .nav-chapter-label { font-size: 0.55rem; opacity: 0.4; display: block; margin-left: 1.25rem; letter-spacing: 0.08em; }
+    .sidebar-footer { font-size: 0.62rem; color: rgba(255,255,255,0.13); letter-spacing: 0.1em; }
 
-/* ===== SECTION HEADINGS ===== */
-.sec-head{max-width:620px;margin-bottom:48px;}
-.sec-head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-top:10px;}
-.sec-head p{color:#454340;font-size:16px;margin-top:12px;}
-.sec-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+    /* PAGES */
+    #pages { flex: 1; overflow-y: auto; scroll-behavior: smooth; }
+    #pages::-webkit-scrollbar { width: 3px; }
+    #pages::-webkit-scrollbar-track { background: transparent; }
+    #pages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
 
-/* ===== SERVICES ===== */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.svc-card{
-  background:var(--cream);border:1px solid rgba(33,31,28,0.1);
-  border-radius:var(--radius);padding:26px 24px;
-  transition:transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-}
-.svc-card:hover{transform:translateY(-5px);border-color:var(--amber);box-shadow:0 14px 28px rgba(33,31,28,0.1);}
-.svc-icon{
-  width:46px;height:46px;border-radius:10px;background:rgba(226,118,43,0.12);
-  display:flex;align-items:center;justify-content:center;color:var(--amber-dark);font-size:19px;margin-bottom:16px;
-}
-.svc-card h3{font-size:16px;text-transform:none;letter-spacing:0;font-weight:600;margin-bottom:6px;}
-.svc-card p{font-size:14px;color:#5C5A55;}
-@media(max-width:880px){.services-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:560px){.services-grid{grid-template-columns:1fr;}}
+    .page {
+      min-height: 100vh;
+      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 6vw, 5rem);
+      display: flex; flex-direction: column; justify-content: center;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      max-width: 780px;
+      opacity: 0; transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .page.in-view { opacity: 1; transform: none; }
 
-/* ===== ABOUT ===== */
-.about{background:var(--petrol);color:var(--paper);}
-.about .eyebrow{color:#9FD4C9;}
-.about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:start;}
-.about h2{color:var(--paper);}
-.about p.lead{font-size:17px;color:#DCE9E6;margin:18px 0 20px;max-width:520px;}
-.tag-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
-.tag{
-  font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;
-  padding:8px 14px;border-radius:20px;border:1px solid rgba(244,239,227,0.3);color:#E8E2D2;
-}
-.about-card{background:rgba(244,239,227,0.07);border:1px solid rgba(244,239,227,0.18);border-radius:var(--radius);padding:24px;}
-.about-card h3{font-size:14px;color:var(--paper);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px;}
-.about-card ul{list-style:none;font-size:14.5px;color:#DCE9E6;display:flex;flex-direction:column;gap:10px;}
-.about-card ul li{display:flex;gap:10px;align-items:flex-start;}
-.about-card ul li i{color:var(--amber);margin-top:3px;font-size:13px;}
-@media(max-width:880px){.about-grid{grid-template-columns:1fr;gap:32px;}}
+    .page-eyebrow { font-size: 0.62rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; opacity: 0.8; }
+    .page-month { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--faded); margin-bottom: 1.75rem; opacity: 0.6; }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 300; font-style: italic; line-height: 1.15;
+      color: var(--cream); margin-bottom: 2.5rem;
+    }
+    .page-divider { width: 36px; height: 1px; background: var(--gold); opacity: 0.45; margin-bottom: 2.5rem; }
 
-/* ===== REVIEWS ===== */
-.reviews-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px;flex-wrap:wrap;}
-.reviews-score{display:flex;align-items:center;gap:14px;background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:30px;padding:10px 20px;}
-.reviews-score .n{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;}
-.reviews-score .stars{color:var(--amber-dark);font-size:14px;}
-.reviews-score .sub{font-size:12.5px;color:#6B6862;font-family:'JetBrains Mono',monospace;}
-.testi-viewport{overflow:hidden;position:relative;}
-.testi-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;}
-.testi-track::-webkit-scrollbar{display:none;}
-.testi-card{
-  scroll-snap-align:start;flex:0 0 100%;max-width:340px;
-  background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:var(--radius);
-  padding:24px;display:flex;flex-direction:column;gap:14px;
-}
-@media(min-width:640px){.testi-card{flex:0 0 calc(50% - 9px);}}
-@media(min-width:980px){.testi-card{flex:0 0 calc(33.333% - 12px);}}
-.testi-stars{color:var(--amber-dark);font-size:13px;}
-.testi-text{font-size:14.5px;color:#3A3835;flex:1;}
-.testi-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(33,31,28,0.08);padding-top:12px;}
-.testi-name{font-weight:600;font-size:14px;}
-.testi-meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#7A776F;}
-.testi-controls{display:flex;justify-content:center;gap:16px;align-items:center;margin-top:24px;}
-.testi-arrow{
-  width:40px;height:40px;border-radius:50%;border:1px solid rgba(33,31,28,0.18);
-  display:flex;align-items:center;justify-content:center;transition:background 0.2s ease,color 0.2s ease;
-}
-.testi-arrow:hover{background:var(--graphite);color:var(--paper);}
-.testi-dots{display:flex;gap:7px;}
-.testi-dot{width:7px;height:7px;border-radius:50%;background:rgba(33,31,28,0.2);transition:background 0.2s ease,transform 0.2s ease;}
-.testi-dot.active{background:var(--amber-dark);transform:scale(1.3);}
+    /* TIMELINE */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .tl-item { display: flex; gap: 1.5rem; position: relative; padding-bottom: 2.2rem; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-left { display: flex; flex-direction: column; align-items: flex-end; min-width: 95px; }
+    .tl-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 0.82rem;
+      color: var(--gold); opacity: 0.75;
+      text-align: right; width: 95px;
+      padding-top: 0.1rem; padding-right: 1rem;
+      line-height: 1.3;
+    }
+    .tl-line-wrap { display: flex; flex-direction: column; align-items: center; position: absolute; left: 95px; top: 0; bottom: 0; }
+    .tl-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); opacity: 0.5; flex-shrink: 0; margin-top: 0.35rem; }
+    .tl-dot.special { background: var(--blush); opacity: 1; width: 11px; height: 11px; box-shadow: 0 0 12px rgba(201,160,160,0.4); }
+    .tl-vline { width: 1px; background: rgba(255,255,255,0.07); flex: 1; margin-top: 5px; }
+    .tl-item:last-child .tl-vline { display: none; }
+    .tl-content { padding-top: 0.05rem; flex: 1; padding-left: 1.8rem; }
+    .tl-title { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; color: var(--cream); margin-bottom: 0.5rem; letter-spacing: 0.01em; }
+    .tl-text { font-size: 0.875rem; font-weight: 300; line-height: 1.85; color: rgba(250,247,244,0.65); }
+    .tl-text em { color: var(--blush); font-style: italic; }
 
-/* ===== PRACTICAL INFO ===== */
-.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-.info-card{background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:var(--radius);padding:26px 24px;}
-.info-card h3{font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px;color:var(--petrol);}
-.info-card h3 i{color:var(--amber-dark);}
-.hours-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;border-bottom:1px solid rgba(33,31,28,0.06);}
-.hours-row:last-child{border-bottom:none;}
-.hours-row .day{font-weight:500;}
-.hours-row .time{font-family:'JetBrains Mono',monospace;font-size:13px;color:#5C5A55;}
-.hours-row.today{background:rgba(226,118,43,0.08);margin:0 -12px;padding:8px 12px;border-radius:6px;border-bottom:none;}
-.hours-row.today .day{color:var(--amber-dark);}
-.pill-list{display:flex;flex-wrap:wrap;gap:10px;}
-.pill-list .pill{display:flex;align-items:center;gap:8px;font-size:13.5px;background:var(--paper-dim);padding:9px 14px;border-radius:20px;}
-.pill-list .pill i{color:var(--amber-dark);font-size:13px;}
-@media(max-width:760px){.infos-grid{grid-template-columns:1fr;}}
+    /* HIGHLIGHT BLOCK */
+    .highlight {
+      background: rgba(184,149,106,0.06);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 4px 4px 0;
+      padding: 1.4rem 1.75rem;
+      margin: 1.5rem 0;
+    }
+    .highlight-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1.1rem;
+      line-height: 1.7; color: rgba(250,247,244,0.85);
+    }
 
-/* ===== CONTACT ===== */
-.contact{background:var(--graphite);color:var(--paper);}
-.contact .eyebrow{color:#B5AFA0;}
-.contact h2{color:var(--paper);}
-.contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px;margin-top:32px;}
-.contact-block{display:flex;gap:14px;margin-bottom:22px;}
-.contact-block i{width:38px;height:38px;border-radius:9px;background:rgba(226,118,43,0.16);color:var(--amber);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;}
-.contact-block .t{font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#A6A095;margin-bottom:4px;}
-.contact-block .v{font-size:16px;font-weight:500;}
-.contact-block .v a:hover{color:var(--amber);}
-.map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(244,239,227,0.15);min-height:300px;}
-.map-wrap iframe{width:100%;height:100%;min-height:300px;border:0;display:block;}
-@media(max-width:880px){.contact-grid{grid-template-columns:1fr;}}
+    /* DETAIL CARD */
+    .detail-card {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 5px; padding: 1.25rem 1.5rem;
+      margin-top: 1.2rem;
+    }
+    .detail-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); opacity: 0.65; margin-bottom: 0.5rem; }
+    .detail-value { font-size: 0.85rem; font-weight: 300; line-height: 1.75; color: rgba(250,247,244,0.65); }
 
-/* ===== FOOTER ===== */
-footer{background:var(--graphite);color:#9C9789;padding:28px 0;border-top:1px solid rgba(244,239,227,0.08);}
-.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;}
-.foot-row .logo{color:var(--paper);font-size:15px;}
-.foot-row .logo .gear{color:var(--amber);width:22px;height:22px;}
+    /* NOTE */
+    .page-note { margin-top: 3rem; font-size: 0.72rem; color: rgba(250,247,244,0.22); font-style: italic; letter-spacing: 0.04em; }
 
-/* ===== MOBILE CALL BUTTON ===== */
-.mobile-call-btn{display:none;}
-@media(max-width:720px){
-  .mobile-call-btn{
-    display:flex;align-items:center;justify-content:center;gap:10px;
-    position:fixed;bottom:18px;left:18px;right:18px;z-index:90;
-    background:var(--amber);color:var(--graphite);
-    padding:15px;border-radius:30px;font-weight:600;font-size:15px;
-    box-shadow:0 10px 26px rgba(33,31,28,0.3);
-  }
-  body{padding-bottom:78px;}
-}
+    /* INTRO PARAGRAPH */
+    .page-intro { font-size: 0.92rem; font-weight: 300; line-height: 1.9; color: rgba(250,247,244,0.6); margin-bottom: 2.5rem; }
+    .page-intro em { color: var(--blush); font-style: italic; }
 
-/* ===== RDV SECTION ===== */
-.rdv{background:var(--paper-dim);}
-.rdv .eyebrow{color:var(--amber-dark);}
+    @media (max-width: 640px) {
+      #sidebar { display: none; }
+      .tl-left { min-width: 68px; }
+      .tl-date { width: 68px; font-size: 0.72rem; padding-right: 0.6rem; }
+      .tl-line-wrap { left: 68px; }
+      .tl-content { padding-left: 1.4rem; }
+    }
 
-.rdv-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
-@media(max-width:880px){.rdv-grid{grid-template-columns:1fr;gap:32px;}}
+    /* LOGIN GATE */
+    #login {
+      position: fixed; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: var(--ink);
+      z-index: 200;
+      text-align: center; padding: 2rem;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    #login.hidden { opacity: 0; transform: scale(1.04); pointer-events: none; }
+    .login-eyebrow {
+      font-size: 0.62rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.7; margin-bottom: 2rem;
+    }
+    .login-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      font-weight: 300; font-style: italic;
+      color: var(--cream); margin-bottom: 0.75rem; line-height: 1.15;
+    }
+    .login-text {
+      font-size: 0.8rem; font-weight: 300; color: var(--faded);
+      margin-bottom: 2.5rem; letter-spacing: 0.02em;
+    }
+    .login-form { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; }
+    .login-input {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 1.2rem; color: var(--cream);
+      background: none; border: none; border-bottom: 1px solid rgba(255,255,255,0.25);
+      text-align: center; padding: 0.5rem 0.25rem; width: 220px;
+      outline: none; transition: border-color 0.3s;
+    }
+    .login-input::placeholder { color: rgba(250,247,244,0.3); }
+    .login-input:focus { border-color: var(--gold); }
+    .login-btn {
+      font-family: 'Jost', sans-serif; font-size: 0.7rem;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--cream); background: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 1rem 2.5rem; cursor: pointer;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .login-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .login-hint { font-size: 0.65rem; color: rgba(250,247,244,0.18); margin-top: 1.5rem; letter-spacing: 0.04em; font-style: italic; }
+    .login-error { font-size: 0.68rem; color: var(--blush); opacity: 0; height: 0.9rem; letter-spacing: 0.04em; }
+    .login-error.show { opacity: 1; }
 
-/* CTA rapides */
-.rdv-quick{display:flex;flex-direction:column;gap:14px;}
-.rdv-quick-title{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;}
-.rdv-cta-card{
-  display:flex;align-items:center;gap:16px;
-  background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:var(--radius);
-  padding:18px 20px;
-  transition:transform 0.2s ease,box-shadow 0.2s ease,border-color 0.2s ease;
-  text-decoration:none;color:var(--ink);
-}
-.rdv-cta-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(33,31,28,0.1);border-color:var(--amber);}
-.rdv-cta-icon{
-  width:44px;height:44px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
-}
-.rdv-cta-icon.tel{background:rgba(226,118,43,0.12);color:var(--amber-dark);}
-.rdv-cta-body .head{font-weight:700;font-size:15px;margin-bottom:2px;}
-.rdv-cta-body .sub{font-size:13px;color:#6B6862;}
-.rdv-or{display:flex;align-items:center;gap:10px;color:var(--steel);font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.08em;margin:4px 0;}
-.rdv-or::before,.rdv-or::after{content:"";flex:1;height:1px;background:rgba(33,31,28,0.1);}
-
-/* Formulaire */
-.rdv-form-wrap{
-  background:var(--cream);border:1px solid rgba(33,31,28,0.1);border-radius:14px;
-  padding:32px 30px;
-  box-shadow:0 8px 24px rgba(33,31,28,0.07);
-}
-.rdv-form-wrap h3{font-size:18px;margin-bottom:4px;}
-.rdv-form-wrap .form-sub{font-size:13.5px;color:#6B6862;margin-bottom:24px;}
-
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-@media(max-width:560px){.form-row{grid-template-columns:1fr;}}
-
-.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
-.field label{font-size:12.5px;font-weight:600;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.07em;color:var(--petrol);}
-.field input,
-.field select,
-.field textarea{
-  font-family:'Work Sans',sans-serif;
-  font-size:15px;
-  border:1.5px solid rgba(33,31,28,0.15);
-  border-radius:8px;
-  padding:11px 14px;
-  background:var(--paper);
-  color:var(--ink);
-  transition:border-color 0.2s ease,box-shadow 0.2s ease;
-  outline:none;
-  width:100%;
-}
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-  border-color:var(--amber);
-  box-shadow:0 0 0 3px rgba(226,118,43,0.15);
-}
-.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6862' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:calc(100% - 14px) 50%;}
-.field textarea{resize:vertical;min-height:100px;}
-
-.form-hint{font-size:12px;color:#9A9690;font-family:'JetBrains Mono',monospace;}
-
-.form-submit{
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  width:100%;padding:14px;border-radius:30px;
-  background:var(--graphite);color:var(--paper);
-  font-family:'Work Sans',sans-serif;font-size:15px;font-weight:600;
-  cursor:pointer;border:none;
-  margin-top:6px;
-  transition:background 0.2s ease,transform 0.2s ease,box-shadow 0.2s ease;
-}
-.form-submit:hover{background:var(--amber-dark);transform:translateY(-1px);box-shadow:0 8px 20px rgba(184,90,28,0.3);}
-.form-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none;}
-
-/* Success state */
-.form-success{
-  display:none;
-  flex-direction:column;align-items:center;text-align:center;
-  gap:14px;padding:20px 0;
-}
-.form-success .check{
-  width:56px;height:56px;border-radius:50%;
-  background:rgba(31,78,74,0.12);color:var(--petrol);
-  display:flex;align-items:center;justify-content:center;font-size:22px;
-}
-.form-success h4{font-size:18px;}
-.form-success p{font-size:14px;color:#5C5A55;}
-
-.reveal{opacity:0;}
-</style>
+    /* AUDIO TOGGLE */
+    #audio-toggle {
+      position: fixed; top: 1.4rem; right: 1.4rem; z-index: 300;
+      width: 38px; height: 38px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(26,16,24,0.55); backdrop-filter: blur(4px);
+      color: var(--gold); font-size: 0.95rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; opacity: 0; pointer-events: none;
+      transition: opacity 0.6s ease, border-color 0.3s, transform 0.2s;
+    }
+    #audio-toggle.visible { opacity: 1; pointer-events: auto; }
+    #audio-toggle:hover { border-color: var(--gold); transform: scale(1.06); }
+    #audio-toggle.muted { color: var(--faded); }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="container nav-wrap">
-    <a href="#hero" class="logo">
-      <svg class="gear" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="7"/>
-        <path d="M50 14v16M50 70v16M86 50h-16M30 50H14M75.6 24.4l-11.3 11.3M35.7 64.3l-11.3 11.3M75.6 75.6l-11.3-11.3M35.7 35.7l-11.3-11.3" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-        <circle cx="50" cy="50" r="15" fill="currentColor"/>
-      </svg>
-      SK <span>AUTO</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">Le garage</a>
-      <a href="#avis">Avis clients</a>
-      <a href="#rdv">Rendez-vous</a>
-      <a href="#infos">Infos pratiques</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+33661272893" class="nav-call"><i class="fa-solid fa-phone"></i> 06 61 27 28 93</a>
+<!-- LOGIN GATE -->
+<div id="login">
+  <div class="login-eyebrow">Connexion</div>
+  <h1 class="login-title">Avant d'entrer...</h1>
+  <p class="login-text">Dis-moi qui tu es</p>
+  <div class="login-form">
+    <input id="loginName" class="login-input" type="text" placeholder="Ton prénom" autocomplete="off" />
+    <div id="loginError" class="login-error">Essaie encore... ❤</div>
+    <button class="login-btn" onclick="tryLogin()">Entrer &nbsp;→</button>
+  </div>
+  <div class="login-hint">Un petit endroit rien que pour toi</div>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgm" loop preload="auto">
+  <source src="musique.mp3" type="audio/mpeg" />
+</audio>
+<button id="audio-toggle" onclick="toggleAudio()" aria-label="Musique">♪</button>
+
+<!-- COVER -->
+<div id="cover">
+  <div class="cover-date">23 Mars 2026 — 21h34</div>
+  <h1 class="cover-title">Pour Toi</h1>
+  <p class="cover-subtitle">Notre histoire, mois par mois</p>
+  <div class="cover-line"></div>
+  <button class="cover-btn" onclick="openBook()">Commencer &nbsp;→</button>
+</div>
+
+<!-- BOOK -->
+<div id="book">
+  <aside id="sidebar">
+    <div class="sidebar-logo">Pour Toi</div>
+    <nav id="nav">
+      <button class="nav-item active" onclick="goTo('ch1')">
+        <span class="dot"></span>
+        <span>
+          Mars 2026
+          <span class="nav-chapter-label">Chapitre I · Le début</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goTo('ch2')">
+        <span class="dot"></span>
+        <span>
+          Avril 2026
+          <span class="nav-chapter-label">Chapitre II · Les signes</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goTo('ch3')">
+        <span class="dot"></span>
+        <span>
+          Mai 2026
+          <span class="nav-chapter-label">Chapitre III · Monsieur &amp; Madame</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goTo('ch4')">
+        <span class="dot"></span>
+        <span>
+          Juin 2026
+          <span class="nav-chapter-label">Chapitre IV · Enfin nous</span>
+        </span>
+      </button>
+
     </nav>
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+    <div class="sidebar-footer">Fait avec amour ❤</div>
+  </aside>
 
-<main>
+  <main id="pages">
 
-  <section class="hero" id="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow">Garage indépendant · Brignais (69)</p>
-        <h1>Le garage qu'on recommande<br><span class="hl">les yeux fermés.</span></h1>
-        <p class="lead">Entretien, réparation, pneus et vente de véhicules à Brignais. Une équipe jeune, honnête et réactive — sans arnaque, sans jargon, au juste prix.</p>
-        <div class="hero-ctas">
-          <a href="#rdv" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Prendre rendez-vous</a>
-          <a href="tel:+33661272893" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> Appeler</a>
-        </div>
+    <!-- CHAPITRE I : MARS 2026 -->
+    <section class="page" id="ch1">
+      <div class="page-eyebrow">Chapitre I</div>
+      <div class="page-month">Mars 2026</div>
+      <h2 class="page-title">Le message qui a tout changé</h2>
+      <div class="page-divider"></div>
+
+      <p class="page-intro">
+        Il y a des soirs qui ressemblent à tous les autres jusqu'à ce qu'ils ne le soient plus. Le 23 mars 2026, un dimanche soir, à <em>21h34</em>, une notification arrive. Rien d'exceptionnel en apparence. Un message sur mon compte Instagram. Mais c'est là, dans ce détail infime, que quelque chose commence.
+      </p>
+
+      <div class="highlight">
+        <p class="highlight-text">
+          « Elle voulait savoir quel groupe c'était. Moi j'avais juste créé un truc pour rester en contact avec des têtes connues du lycée. Elle, elle cherchait des amis. Elle avait déjà quelqu'un dans sa vie. Moi, je n'avais jamais eu personne. On ne savait pas encore qu'on allait se trouver l'un dans l'autre. »
+        </p>
       </div>
-      <div class="ticket-wrap">
-        <div class="stamp">vérifié<br>idgarages</div>
-        <div class="ticket">
-          <div class="ticket-top">
-            <div>
-              <p class="label">Bon de passage</p>
-              <p class="name">SK Auto</p>
-            </div>
-            <div class="status-pill" id="status-pill"><span class="dot"></span><span id="status-text">—</span></div>
+
+      <div class="timeline" style="margin-top: 2.5rem;">
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">23 mars<br/>21h34</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
           </div>
-          <div class="ticket-row"><span>Adresse</span><b>Brignais, Rhône</b></div>
-          <div class="ticket-row"><span>Aujourd'hui</span><b id="today-hours">—</b></div>
-          <div class="ticket-row"><span>Paiement</span><b>CB · Chèque · Espèces</b></div>
-          <div class="ticket-rating">
-            <span class="num">5,0</span>
-            <div>
-              <div class="stars">★★★★★</div>
-              <div class="count">sur 92 avis vérifiés</div>
+          <div class="tl-content">
+            <div class="tl-title">Le premier message</div>
+            <div class="tl-text">
+              Elle m'envoie un message sur Instagram pour savoir quel genre de groupe j'avais créé. J'avais créé un groupe de connaissances du lycée — rien d'ambitieux, juste un endroit pour garder un lien avec des personnes du lycée. Maelyse, elle voulait simplement se faire des amis. Elle avait déjà quelqu'un dans sa vie. Moi j'avais un groupe vide et du temps libre. <em>C'est tout ce qu'il a fallu.</em>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <div class="tread"></div>
-
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="reveal">
-        <div class="stat-num" data-target="92" data-decimals="0">0</div>
-        <div class="stat-label">Avis clients</div>
-      </div>
-      <div class="reveal">
-        <div class="stat-num" data-target="5" data-decimals="1">0</div>
-        <div class="stat-label">Note moyenne / 5</div>
-      </div>
-      <div class="reveal">
-        <div class="stat-num mono" style="font-size:clamp(1.6rem,4vw,2.2rem);">Brignais</div>
-        <div class="stat-label">Rhône (69)</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <div class="sec-head reveal">
-        <p class="eyebrow">Ce qu'on fait</p>
-        <h2>Nos services</h2>
-        <p>Du contrôle technique à la vente de véhicules, tout ce qu'il faut pour entretenir votre voiture sans multiplier les rendez-vous.</p>
-      </div>
-      <div class="services-grid">
-        <div class="svc-card reveal">
-          <div class="svc-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <h3>Pré-contrôle technique</h3>
-          <p>On vérifie les points sensibles avant votre passage au contrôle, pour éviter les mauvaises surprises.</p>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-          <h3>Présentation au contrôle technique</h3>
-          <p>Prise en charge complète de votre véhicule jusqu'au centre de contrôle.</p>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon"><i class="fa-solid fa-file-signature"></i></div>
-          <h3>Déclaration de sinistre</h3>
-          <p>On vous accompagne dans les démarches auprès de votre assurance.</p>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-          <h3>Transparence sur les pièces</h3>
-          <p>Pièces usagées et changées présentées sur demande. Rien de caché.</p>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon"><i class="fa-solid fa-car"></i></div>
-          <h3>Vente de véhicules</h3>
-          <p>Occasion et neuf, avec les réparations nécessaires faites avant la vente.</p>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7L5.6 5.6"/></svg>
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Fin mars</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
           </div>
-          <h3>Montage de pneus</h3>
-          <p>Pose et équilibrage, toutes saisons.</p>
-        </div>
-      </div>
-      <div class="services-grid" style="margin-top:20px;">
-        <div class="svc-card reveal">
-          <div class="svc-icon"><i class="fa-solid fa-volume-high"></i></div>
-          <h3>Montage d'accessoires</h3>
-          <p>Autoradio, GPS, alarmes — installation soignée.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div>
-        <p class="eyebrow reveal">Le garage</p>
-        <h2 class="reveal">Un atelier qui ne vous fait pas payer son ignorance de votre dossier.</h2>
-        <p class="lead reveal">Chez SK Auto, l'idée est simple : un entretien de qualité, à un tarif qui reste raisonnable. Pas de pièces gonflées, pas de devis surprise — on vous explique ce qu'on fait et pourquoi, avant de le faire.</p>
-        <div class="tag-list reveal">
-          <span class="tag">Véhicules de tourisme</span>
-          <span class="tag">SUV / 4x4</span>
-          <span class="tag">Camping-cars</span>
-          <span class="tag">Thermique essence / diesel</span>
-        </div>
-      </div>
-      <div class="about-card reveal">
-        <h3>En pratique</h3>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Garage indépendant, présent sur idGarages.com depuis 2025</li>
-          <li><i class="fa-solid fa-check"></i> Expertise mécanique sur véhicules thermiques</li>
-          <li><i class="fa-solid fa-check"></i> Devis détaillé avant intervention</li>
-          <li><i class="fa-solid fa-check"></i> Pièces changées montrées sur demande</li>
-          <li><i class="fa-solid fa-check"></i> Parc Actisud — accès et stationnement faciles</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== RDV / CONTACT FORM ===== -->
-  <section class="rdv" id="rdv">
-    <div class="container">
-      <div class="sec-head reveal">
-        <p class="eyebrow">On s'organise</p>
-        <h2>Prendre rendez-vous</h2>
-        <p>Appelez directement, écrivez sur WhatsApp ou remplissez le formulaire — on revient vers vous sous 24 h.</p>
-      </div>
-
-      <div class="rdv-grid">
-
-        <!-- Colonne gauche : accès rapides -->
-        <div class="rdv-quick reveal">
-          <p class="rdv-quick-title">Accès rapide</p>
-
-          <a href="tel:+33661272893" class="rdv-cta-card">
-            <div class="rdv-cta-icon tel"><i class="fa-solid fa-phone"></i></div>
-            <div class="rdv-cta-body">
-              <p class="head">Appeler le garage</p>
-              <p class="sub">06 61 27 28 93<br>Lun–Ven 8h–12h / 14h–19h · Sam 8h–14h</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" style="color:#9A9690;font-size:13px;margin-left:auto;"></i>
-          </a>
-
-          <div class="rdv-or">ou</div>
-
-          <!-- Lien WhatsApp -->
-          <a href="https://wa.me/33661272893?text=Bonjour%20SK%20Auto%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener" class="rdv-cta-card">
-            <div class="rdv-cta-icon" style="background:rgba(37,211,102,0.12);color:#1DA851;"><i class="fa-brands fa-whatsapp"></i></div>
-            <div class="rdv-cta-body">
-              <p class="head">WhatsApp</p>
-              <p class="sub">Message pré-rempli · réponse rapide</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" style="color:#9A9690;font-size:13px;margin-left:auto;"></i>
-          </a>
-
-          <div class="rdv-or">ou</div>
-
-          <div class="rdv-cta-card" style="cursor:default;pointer-events:none;opacity:0.7;">
-            <div class="rdv-cta-icon" style="background:rgba(226,118,43,0.12);color:var(--amber-dark);"><i class="fa-solid fa-envelope"></i></div>
-            <div class="rdv-cta-body">
-              <p class="head">Formulaire email</p>
-              <p class="sub">Réponse sous 24 h (hors week-end)</p>
-            </div>
-            <i class="fa-solid fa-arrow-down" style="color:#9A9690;font-size:13px;margin-left:auto;"></i>
-          </div>
-        </div>
-
-        <!-- Colonne droite : formulaire -->
-        <div class="rdv-form-wrap reveal">
-
-          <h3>Formulaire de demande</h3>
-          <p class="form-sub">On vous répond dans la journée (hors week-end).</p>
-
-          <div id="rdv-form-inner">
-            <div class="form-row">
-              <div class="field">
-                <label for="f-prenom">Prénom *</label>
-                <input type="text" id="f-prenom" name="prenom" placeholder="Marie" required autocomplete="given-name">
-              </div>
-              <div class="field">
-                <label for="f-nom">Nom *</label>
-                <input type="text" id="f-nom" name="nom" placeholder="Dupont" required autocomplete="family-name">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="field">
-                <label for="f-tel">Téléphone *</label>
-                <input type="tel" id="f-tel" name="telephone" placeholder="06 12 34 56 78" required autocomplete="tel">
-              </div>
-              <div class="field">
-                <label for="f-email">Email</label>
-                <input type="email" id="f-email" name="email" placeholder="marie@exemple.fr" autocomplete="email">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="field">
-                <label for="f-marque">Marque du véhicule *</label>
-                <input type="text" id="f-marque" name="marque_vehicule" placeholder="Renault, Peugeot…" required>
-              </div>
-              <div class="field">
-                <label for="f-modele">Modèle & année</label>
-                <input type="text" id="f-modele" name="modele_annee" placeholder="Clio IV · 2018">
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="f-service">Type de prestation</label>
-              <select id="f-service" name="prestation">
-                <option value="">— Choisir —</option>
-                <option>Entretien / révision</option>
-                <option>Réparation / panne</option>
-                <option>Changement de pneus</option>
-                <option>Pré-contrôle technique</option>
-                <option>Passage au contrôle technique</option>
-                <option>Déclaration de sinistre</option>
-                <option>Vente / achat de véhicule</option>
-                <option>Montage d'accessoires</option>
-                <option>Autre</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="f-dispo">Disponibilités souhaitées</label>
-              <input type="text" id="f-dispo" name="disponibilites" placeholder="Ex : mardi matin ou jeudi après-midi">
-            </div>
-
-            <div class="field">
-              <label for="f-message">Description du problème *</label>
-              <textarea id="f-message" name="message" rows="4" placeholder="Décrivez le symptôme, le bruit, la panne… Plus c'est précis, mieux on peut préparer votre rdv." required></textarea>
-              <span class="form-hint">Aucun jargon requis — décrivez ce que vous ressentez / entendez.</span>
-            </div>
-
-            <button type="button" class="form-submit" id="form-submit-btn">
-              <i class="fa-solid fa-paper-plane"></i> Envoyer ma demande
-            </button>
-          </div>
-
-          <!-- Message de succès -->
-          <div class="form-success" id="form-success">
-            <div class="check"><i class="fa-solid fa-check"></i></div>
-            <h4>Demande envoyée !</h4>
-            <p>On a bien reçu votre message et on vous rappelle dans les plus brefs délais.<br>En cas d'urgence : <a href="tel:+33661272893" style="color:var(--amber-dark);font-weight:600;">06 61 27 28 93</a></p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="avis">
-    <div class="container">
-      <div class="reviews-head">
-        <div class="sec-head reveal" style="margin-bottom:0;">
-          <p class="eyebrow">Ils nous font confiance</p>
-          <h2>Avis clients</h2>
-        </div>
-        <div class="reviews-score reveal">
-          <span class="n">5,0</span>
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="sub">92 avis</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-viewport">
-        <div class="testi-track" id="testiTrack">
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Venue pour changer plaquettes de freins et disques sur ma Twingo, l'équipe a été de très bon conseil, rapide et efficace. Une équipe sérieuse que je recommande les yeux fermés.</p>
-            <div class="testi-foot"><span class="testi-name">Wendy Jolivot</span><span class="testi-meta">Local guide · 18 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Garage sérieux, professionnel et particulièrement efficace. L'équipe est accueillante, à l'écoute et prend le temps d'expliquer clairement les interventions.</p>
-            <div class="testi-foot"><span class="testi-name">Morgane Mastruzzo</span><span class="testi-meta">Local guide · 40 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Appelé le mardi pour un rendez-vous le jeudi. Réparation de mon phare au top, et le garage a même contacté une casse pour trouver une pièce à petit budget.</p>
-            <div class="testi-foot"><span class="testi-name">Line Dubois</span><span class="testi-meta">Local guide · 39 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Équipe de passionnés au top, réactifs, à l'écoute et très pro. Travail bien fait dans un délai maîtrisé et à tarif attractif. Je leur confierai ma voiture à nouveau.</p>
-            <div class="testi-foot"><span class="testi-name">Vernay Clément</span><span class="testi-meta">9 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Pas facile de trouver un garage sérieux avec des tarifs raisonnables, mais ici j'ai eu une très bonne expérience : équipe professionnelle et transparente.</p>
-            <div class="testi-foot"><span class="testi-name">Raquel Dias</span><span class="testi-meta">Local guide · 9 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Travail réalisé avec professionnalisme et dans un délai rapide. Équipe sympathique et honnête, qui rend même le véhicule nettoyé. J'y reviendrai sans hésiter.</p>
-            <div class="testi-foot"><span class="testi-name">Augustin Détré</span><span class="testi-meta">Local guide · 46 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Venue pour un second devis, j'ai découvert que le premier garage voulait clairement m'arnaquer. Ici : transparence totale et conseils sincères. Rare et précieux.</p>
-            <div class="testi-foot"><span class="testi-name">Patricia Fiore</span><span class="testi-meta">7 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Service au top, très honnête, rapide et efficace. De nos jours c'est dur de trouver un garage aussi bien, donc je recommande fortement.</p>
-            <div class="testi-foot"><span class="testi-name">Inesa Arzumanyan</span><span class="testi-meta">Local guide · 15 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Super équipe de jeunes hyper serviables, compétents et rapides. Enfin un garage qui ne gonfle pas la note parce que vous êtes une femme et n'y comprenez rien en mécanique !</p>
-            <div class="testi-foot"><span class="testi-name">Adeline Aurouze</span><span class="testi-meta">2 avis</span></div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">Remplacement de la chaîne de distribution sur ma 118d. Je recommande fortement ce garage, tarifs compétitifs et professionnels.</p>
-            <div class="testi-foot"><span class="testi-name">Mickael Dalpino</span><span class="testi-meta">Local guide · 101 avis</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-controls">
-        <button class="testi-arrow" id="testiPrev" aria-label="Avis précédent"><i class="fa-solid fa-chevron-left"></i></button>
-        <div class="testi-dots" id="testiDots"></div>
-        <button class="testi-arrow" id="testiNext" aria-label="Avis suivant"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
-
-  <div class="tread"></div>
-
-  <section id="infos">
-    <div class="container">
-      <div class="sec-head reveal">
-        <p class="eyebrow">Pratique</p>
-        <h2>Infos pratiques</h2>
-      </div>
-      <div class="infos-grid">
-        <div class="info-card reveal">
-          <h3><i class="fa-solid fa-clock"></i> Horaires d'ouverture</h3>
-          <div id="hours-table"></div>
-        </div>
-        <div class="info-card reveal">
-          <h3><i class="fa-solid fa-credit-card"></i> Moyens de paiement</h3>
-          <div class="pill-list">
-            <span class="pill"><i class="fa-solid fa-money-bill-wave"></i> Espèces (&lt; 1000 €)</span>
-            <span class="pill"><i class="fa-solid fa-credit-card"></i> Carte bancaire</span>
-            <span class="pill"><i class="fa-solid fa-money-check"></i> Chèque</span>
-          </div>
-          <h3 style="margin-top:24px;"><i class="fa-solid fa-universal-access"></i> Accessibilité</h3>
-          <div class="pill-list">
-            <span class="pill"><i class="fa-solid fa-square-parking"></i> Parking facile</span>
-            <span class="pill"><i class="fa-solid fa-bus"></i> Transport en commun proche</span>
-            <span class="pill"><i class="fa-solid fa-house"></i> Dépose à domicile possible</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <p class="eyebrow reveal">Nous trouver</p>
-      <h2 class="reveal">Contact</h2>
-      <div class="contact-grid">
-        <div class="reveal">
-          <div class="contact-block">
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <p class="t">Adresse</p>
-              <p class="v">Parc Actisud<br>216 Rue Général de Gaulle<br>69530 Brignais</p>
+          <div class="tl-content">
+            <div class="tl-title">@crush aragon-picasso</div>
+            <div class="tl-text">
+              On passe sur Instagram. Mon compte — <em>crush aragon-picasso</em> — devient le fil entre nous. En quelques échanges, on découvre qu'on est dans exactement la même filière : elle en Première, moi en Terminale. Elle était encore en stage à ce moment-là, donc pas au lycée. On se parlait à distance, dans les marges de nos journées respectives.
             </div>
           </div>
-          <div class="contact-block">
-            <i class="fa-solid fa-phone"></i>
-            <div>
-              <p class="t">Téléphone</p>
-              <p class="v"><a href="tel:+33661272893">06 61 27 28 93</a></p>
-            </div>
-          </div>
-          <div class="contact-block">
-            <i class="fa-solid fa-clock"></i>
-            <div>
-              <p class="t">Aujourd'hui</p>
-              <p class="v" id="contact-today">—</p>
-            </div>
-          </div>
-          <a href="tel:+33661272893" class="btn btn-primary" style="margin-top:8px;"><i class="fa-solid fa-phone"></i> Appeler maintenant</a>
         </div>
-        <div class="map-wrap reveal">
-          <iframe src="https://www.google.com/maps?q=Parc+Actisud,+216+Rue+G%C3%A9n%C3%A9ral+de+Gaulle,+69530+Brignais&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation du garage SK Auto à Brignais"></iframe>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Mars</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Timides, mais curieux</div>
+            <div class="tl-text">
+              On avançait lentement. Pas par froideur — par prudence, sans doute. On se découvrait par petites touches. D'abord nos prénoms, comme si les dire à voix haute rendait tout un peu plus réel. Puis nos dates de naissance. Chaque information partagée était <em>une porte entrouverte</em>, et l'autre choisissait d'y entrer ou non.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Mars</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Son histoire, ma solitude</div>
+            <div class="tl-text">
+              Elle me parle de lui. Elle l'avait rencontré grâce à sa meilleure amie de l'époque — celle qui est aujourd'hui sa pire ennemie. Il n'était pas au lycée : il allait à Vienne, au lycée Robin. Elle me demande si j'ai quelqu'un. Je lui réponds que non. Que je n'ai <em>jamais</em> eu personne dans ma vie. Elle ne s'y attendait sûrement pas. Elle me propose alors de m'aider à trouver quelqu'un. Je ne savais pas encore que cette « quelqu'un », c'était elle.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Mars → 15 mai</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Les stages, la distance</div>
+            <div class="tl-text">
+              Elle était en stage — d'abord chez <em>Porsche</em>, puis chez <em>Hashtag et Arobase</em>, jusqu'au 15 mai. On construisait quelque chose depuis nos écrans, chacun dans son coin. Elle entre deux missions, moi après les cours. La distance physique n'empêchait pas les conversations de se densifier, doucement.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Mars</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Nos fausses adresses</div>
+            <div class="tl-text">
+              Elle me demande où j'habite. Je lui dis <em>un petit village pas loin de Givors</em>. Elle me répond qu'elle est à <em>Ternay</em>. On le sait tous les deux maintenant : c'était faux. Elle habite à Chaponnay. Moi aussi je mentais par défaut, par réflexe de protection. On se protégeait l'un de l'autre sans encore se méfier de l'autre — juste l'instinct de ne pas trop se dévoiler trop tôt. C'est humain. C'est même touchant, à y repenser.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Mars</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Qualités, défauts, passions</div>
+            <div class="tl-text">
+              On est entré dans les vraies conversations. Celles qu'on ne fait pas avec tout le monde. Ce qu'on aimait, ce qu'on ne supportait pas, nos petits défauts avoués avec un sourire invisible. Nos passions. Ce genre d'échange où on sent que l'autre écoute vraiment, pas juste pour répondre. <em>On apprenait à se connaître.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Mars</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Son copain rentrait d'Islande</div>
+            <div class="tl-text">
+              À un moment, elle me dit qu'elle voulait me présenter son copain quand il rentrerait. Il était parti loin — en Islande, je crois. Il était au lycée Robin à Vienne, pas avec nous. <em>La vie avait d'autres plans.</em> Cette présentation n'a jamais eu lieu de la façon imaginée.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Fin mars</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">« Je t'ai déjà vu »</div>
+            <div class="tl-text">
+              Elle voulait voir ma tête. Je lui montre. Et là, elle me dit qu'elle m'avait <em>déjà vu</em>. On était dans le même lycée depuis un moment, et elle m'avait remarqué. Moi qui me croyais invisible dans les couloirs. Ce détail-là, infime pour beaucoup, m'a tout dit. Si elle m'avait vu, c'est qu'elle avait regardé. Et si elle avait regardé...
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-label">À retenir de ce mois</div>
+        <div class="detail-value">
+          Un message à 21h34. Une filière en commun. Deux personnes timides qui avancent à pas comptés. Des adresses inventées. Des vraies confessions. Et une phrase — <em>« je t'ai déjà vu »</em> — qui change tout sans qu'on le réalise encore.
         </div>
       </div>
-    </div>
-  </section>
 
-</main>
+      <div class="page-note">✦ &nbsp; La suite commence au chapitre suivant.</div>
+    </section>
 
-<footer>
-  <div class="container foot-row">
-    <span class="logo">
-      <svg class="gear" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="7"/>
-        <path d="M50 14v16M50 70v16M86 50h-16M30 50H14M75.6 24.4l-11.3 11.3M35.7 64.3l-11.3 11.3M75.6 75.6l-11.3-11.3M35.7 35.7l-11.3-11.3" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-        <circle cx="50" cy="50" r="15" fill="currentColor"/>
-      </svg>
-      SK Auto — Brignais
-    </span>
-    <span>Parc Actisud, 216 Rue Général de Gaulle, 69530 Brignais · 06 61 27 28 93</span>
-  </div>
-</footer>
+    <!-- CHAPITRE II : AVRIL 2026 -->
+    <section class="page" id="ch2">
+      <div class="page-eyebrow">Chapitre II</div>
+      <div class="page-month">Avril 2026</div>
+      <h2 class="page-title">Les signes qu'on fait semblant de ne pas voir</h2>
+      <div class="page-divider"></div>
 
-<a href="tel:+33661272893" class="mobile-call-btn"><i class="fa-solid fa-phone"></i> Appeler le garage</a>
+      <p class="page-intro">
+        Avril commence dans l'attente — des vacances, d'un peu de légèreté. Mais le mois va apporter bien autre chose. Une rupture. Des larmes. Des messages lancés comme des bouteilles à la mer. Et quelques aveux déguisés en blagues. <em>On s'approchait sans se le dire.</em>
+      </p>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+      <div class="highlight">
+        <p class="highlight-text">
+          « Elle m'envoie un "coucouu" un mardi à 17h03. Personne ne fait ça. Personne ne prend le temps de prendre des nouvelles comme ça, juste comme ça. J'étais choqué. Et quelque part, déjà touché. »
+        </p>
+      </div>
+
+      <div class="timeline" style="margin-top: 2.5rem;">
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">1er avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">On n'en peut plus</div>
+            <div class="tl-text">
+              Le lycée pesait. On attendait les vacances comme une délivrance. Il y avait même eu des comptes Instagram créés pour insulter des élèves et des personnels — ce genre de chose qui empoisonne une ambiance entière. On voulait juste souffler. <em>Les vacances ne pouvaient pas arriver assez vite.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Début avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Snap, flammes, et « stalker »</div>
+            <div class="tl-text">
+              On commence à s'ajouter sur Snapchat — juste pour les flammes, en apparence. Elle avait supprimé le message de sa proposition, peut-être par peur, peut-être par réflexe. Mais moi j'avais encore la notification. Je savais. Elle m'avait traité de <em>« stalker »</em> en riant. C'était peut-être sa façon de tester jusqu'où j'avais regardé.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">3 avril<br/>17h03</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">« Coucouu »</div>
+            <div class="tl-text">
+              Un mardi après-midi. 17h03. Elle m'envoie un <em>« coucouu »</em>. Juste ça. Personne ne fait ça — prendre des nouvelles sans raison, sans prétexte, juste pour savoir. J'étais sincèrement surpris. Malheureusement j'étais en train de faire trois choses en même temps, je me suis excusé si j'avais l'air froid. Je lui ai demandé si elle allait mieux. Elle m'a dit que oui.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">4 avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">La Vogue de Vienne</div>
+            <div class="tl-text">
+              Je lui dis que je vais à la Vogue de Vienne et que je pensais qu'elle ne pourrait pas venir. Elle confirme — son copain ne voulait pas la voir parce qu'elle était malade. Une maladie qui ne se transmettait que par la salive. Il avait préféré l'éviter. Les jours suivants on parle vaguement de ciné, mais on ne se raconte pas grand chose. <em>Une période creuse.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">8 avril<br/>19h42</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">« C'est ta mère ? »</div>
+            <div class="tl-text">
+              Je réagis à une de ses stories. Je lui demande si c'est sa mère sur la photo. Elle me dit oui. Je lui dis qu'elles se ressemblent beaucoup. Mais comme je ne parlais pas vraiment, elle sent que quelque chose ne va pas. À 19h42, elle me pose directement la question. Je lui dis que oui ça va — mais pour elle, je mentais un peu. Je lui retourne la question. Elle me répond <em>« oui pk ? »</em>. Je lui explique qu'avant elle n'avait pas l'air bien. Elle me dit que là, ça va mieux.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">13 avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Facebook Rencontre</div>
+            <div class="tl-text">
+              Je réponds à une story sur ce que faisait sa mère. Elle me glisse alors qu'elle s'est inscrite sur <em>Facebook Rencontre</em>. On n'en dit pas plus. On ne parlait vraiment plus trop à ce moment-là — des échanges courts, sans profondeur. Comme si on marquait le temps entre deux vraies conversations.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">18 avril<br/>17h39</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Les vacances chacun de son côté</div>
+            <div class="tl-text">
+              Elle relance : <em>« coucou ça va ? »</em>. On s'échange nos vacances. Elle me dit qu'elle n'a vraiment pas beaucoup d'amis — les seuls qu'elle a ne pouvaient pas sortir. Elle avait passé la journée avec son filleul, et dormi. Moi j'avais fait des randos, des sorties avec des potes, et je rentrais du Sud à 23h40. Deux vies parallèles. Elle me dit aussi qu'elle a hâte d'être au 15 mai — pour rencontrer de nouvelles personnes au stage. <em>Elle cherchait encore quelqu'un.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">20 avril<br/>20h54</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">La rupture</div>
+            <div class="tl-text">
+              Elle me relance. Je lui demande comment s'est passée la reprise de stage. Elle me répond en mode humour que c'était sa meilleure journée — et qu'elle s'était terminée par une rupture. Je lui demande si c'est une blague. Elle me dit que non. <em>Qu'elle est en train de pleurer dans son lit.</em> Il n'était pas prêt pour une vie de couple. J'essaie de lui redonner le sourire. Elle veut revoir ma tête. Je lui dis oui — mais demain, sur Snap, pour les flammes.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">21 avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Elle a pleuré toute la nuit</div>
+            <div class="tl-text">
+              Le lendemain je lui demande si ça va mieux. Elle me dit qu'elle a pleuré toute la nuit et encore ce matin — mais qu'il ne méritait pas ses larmes. Dans l'après-midi, elle me demande de lui dire si des gens veulent faire connaissance avec elle. J'en avais 2-3 en tête. Mais je ne les sentais pas pour elle. Et puis — <em>à vrai dire, je voulais la garder pour moi.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">21 avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Se voir — mais pas le 2 mai</div>
+            <div class="tl-text">
+              Elle me demande si on peut se voir. Je dis oui. Elle me dit que le 2 mai sa famille fait une fête, sinon elle est dispo tous les weekends. Je lui dis non pour le 2 mai — je voulais qu'on se voie <em>seuls</em>, pas entourés de sa famille. Pas encore.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">22 avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">La lettre glissée</div>
+            <div class="tl-text">
+              Je réponds à une story et je lui dis que j'espère que son ex va changer d'avis et revenir. Elle me dit qu'elle doit lui rendre ses affaires — et qu'elle lui glissera une lettre avec. Ce geste-là, cette lettre, dit tout sur ce qu'elle portait encore.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">22 avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Le pari des 20€</div>
+            <div class="tl-text">
+              On parle, et je lui dis que ça fait 18 ans que je n'ai jamais eu personne. Que j'attends qu'elle vienne. Elle me dit que je vais trouver. Moi je n'y croyais pas — je ne voyais personne. Je lance en humour que j'étais prêt à parier <em>20€</em> que je ne serais pas en couple avant fin juillet avec une fille du lycée. Elle me dit qu'on verra bien. Je lui dis que je suis imbattable aux prédictions. <em>Je savais déjà son petit manège. Je faisais semblant de ne pas voir.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">23 avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Le DM sur le pare-brise</div>
+            <div class="tl-text">
+              J'avais vu une fille très belle et j'avais déposé un message sur son pare-brise. Malheureusement — c'était ma pire ennemie de la 6e. Et elle était en couple. Mauvaise pioche. Puis, sur NGL, je reçois un message anonyme : <em>« ça aurait pu être moi. »</em> Je lui envoie. Elle avoue que c'était elle — et que c'était un p'tit prank. Mais je savais que ce n'en était pas un. <em>Elle était déjà sur moi. C'était sûr.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Fin avril</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Elle n'aurait pas dû regarder</div>
+            <div class="tl-text">
+              Fin avril, elle va voir les republications de son ex sur Instagram. Elle n'aurait jamais dû. Certaines choses font mal non pas parce qu'elles apportent quelque chose de nouveau, mais parce qu'elles rouvrent ce qu'on essayait de refermer. <em>Avril se termine comme il a commencé — dans l'attente d'autre chose.</em>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-label">À retenir de ce mois</div>
+        <div class="detail-value">
+          Deux « coucouu » lancés sans raison apparente. Une rupture un soir de reprise de stage. Des larmes une nuit entière. Un pari de 20€ qu'on savait tous les deux biaisé. Et un message anonyme — <em>« ça aurait pu être moi »</em> — qui n'était pas un prank.
+        </div>
+      </div>
+
+      <div class="page-note">✦ &nbsp; Mai arrive. Le stage aussi. Et avec lui, la vraie rencontre.</div>
+    </section>
+
+
+    <!-- CHAPITRE III : MAI 2026 -->
+    <section class="page" id="ch3">
+      <div class="page-eyebrow">Chapitre III</div>
+      <div class="page-month">Mai 2026</div>
+      <h2 class="page-title">Monsieur et Madame</h2>
+      <div class="page-divider"></div>
+
+      <p class="page-intro">
+        Mai, c'est le mois où tout s'accélère sans qu'on s'en rende vraiment compte. Elle est de retour au stage, moi au lycée. On se parle maintenant presque tous les jours — le matin, l'après-midi, le soir. On s'est donné des petits noms sans même décider de le faire. <em>Monsieur. Madame.</em> Comme si on jouait à quelque chose qui, doucement, cessait d'être un jeu.
+      </p>
+
+      <div class="highlight">
+        <p class="highlight-text">
+          « T'es canon quoi. — Aaaaah non c'est toi. — Non non toi. — Toi toi t'es canon. »
+          Un échange de trois secondes. Ridicule peut-être. Mais ces trois secondes-là, je ne les oublierai pas.
+        </p>
+      </div>
+
+      <div class="timeline" style="margin-top: 2.5rem;">
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">1er mai<br/>09h17</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Un 1er mai comme les autres — ou presque</div>
+            <div class="tl-text">
+              Elle m'envoie un « coucouu » à 9h17. Elle veut savoir ce que je fais. Je lui dis que je vais laver l'intérieur de ma voiture. Elle s'ennuie un peu. Puis Maelyse va manger une petite glace a McDo. En fin d'après-midi je recois un message sur NGL et je lui demande si c'est elle qui l'avait envoyé. A 18h42, elle avoue m'avoir envoyé un message anonyme sur NGL et qu'elle n'osait pas me le dire directement. Je lui dis que je sais toujours quand c'est elle. Elle ne comprend pas comment. <em>« Je sais tout. »</em> Elle répond que non, pas tout. On verra.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">1er mai<br/>19h34</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Monsieur. Madame.</div>
+            <div class="tl-text">
+              Le soir du 1er mai, ça part en jeu. <em>« Si si si. — No no no. — Yes yes yes. »</em> On se chamaille pour rien, on s'invente des désaccords juste pour continuer à parler. Et au milieu de ça, les petits noms apparaissent naturellement — elle m'appelle Monsieur, je l'appelle Madame. Ce soir-là elle a une séance de ciné à minuit — un film d'horreur. Je lui dis que j'espère qu'elle n'aura pas trop peur. Elle répond qu'au pire elle hurlera. <em>Elle gère.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">1er mai<br/>21h33</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">« Tu es vraiment in love »</div>
+            <div class="tl-text">
+              Je réagis à sa story — un coucher de soleil. On échange. Et là, dans la conversation, Je lui dit <em>« Tu es vraiment in love je crois »</em>. Elle me dis qu'elle peu arrêter avec ces emojis si cela me dérangeais. Je dis non en fait que ça ne me dérange pas. La conversation tourne en rond — et ce tournoi-là, on l'aimait bien tous les deux.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">2 mai</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Bon app, Monsieur</div>
+            <div class="tl-text">
+              Le 2 mai au matin on se dit bonjour, on se demande si on a bien dormi. Le soir elle me raconte sa journée — le coiffeur, une coupe dont elle est contente, une fête en famille. Moi j'avais passé l'après-midi chez le voisin d'à côté qui est mon pote. <em>Des petits riens qu'on se raconte parce qu'on a envie que l'autre sache.</em> À minuit je lui dis bonne nuit. Elle répond : <em>« Bonne nuit à toi ! Dors bien, à demain si tu veux ;) Merci Monsieur ! »</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">3–5 mai</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Les check-ins du quotidien</div>
+            <div class="tl-text">
+              On s'écrit plusieurs fois par jour. Le matin pour savoir si l'autre a bien dormi. L'après-midi pour savoir ce qu'on fait. Le soir pour résumer la journée. Le 3 mai elle me souhaite bonne nuit et bonne chance pour le lendemain. Le 4 mai à minuit passé elle m'écrit — je dormais pas à ce moment-là car une mise à jour avait supprimé toutes mes alarmes et puis il faisait chaud. Panique. Je lui dit qu'au pire j'enverrias un message à la daronne pour qu'elle me réveille à 7h30. Elle me dit d'acheter un réveil automatique. <em>Flm.</em> Le 5 mai elle me demande si j'aime les photos. Je lui dis que je n'aime pas trop me prendre en photo.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">6 mai<br/>16h10</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">T'es canon quoi</div>
+            <div class="tl-text">
+              Elle trouve mon compte principal et on s'ajoute. Puis elle me dit aussi qu'elle n'ose pas se présenter sur le groupe — il y a juste 23 membres et personnes ne parlent. En regardant ma photo de profil de mon compte perso instagram elle me dis : <em>« Le pire t'es canon quoi. »</em> Je lui retourne le compliment. On se renvoie le mot pendant trois messages. Elle finit par dire <em>« Y'a pas que la beauté extérieure même si t'es beau »</em>. Je dis roooh. Ce même soir elle me pose la vraie question : <em>on se dit comment bonjour au lycée ?</em> Un check ? Elle a le nez bouché et n'est pas sûre. On ne tranche pas encore. Mais la question est posée.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">6 mai</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Le weekend du 23</div>
+            <div class="tl-text">
+              Sa mère lui demande ce que je fais le weekend du 23 mai. Je lui réponds que je suis en révisions — le bac commence le 29. <em>Zut, dit-elle. Désolé, je dis. T'inquiète, elle répond.</em> Mais ce qui compte, c'est que sa mère avait demandé. Quelqu'un d'autre que nous deux pensait déjà à nous.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">21 mai</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Elle joue les intermédiaires</div>
+            <div class="tl-text">
+              Le 21 mai je la contacte pour un service — je veux vérifier pour un garçon si la fille sur qui il crush c'est bien Maélia. Elle me donne le compte, la photo de classe, puis je transmets tout ca au garcon. On communiquait encore via mon compte <em>@crush aragon-picasso</em> — je n'étais pas encore passé sur mon perso avec elle. Le reste du mois, elle me transmettait des infos sur des gens qu'elle connaissait. <em>Des petits ponts jetés entre nos deux mondes.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Mai — en filigrane</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Ce que mai a construit sans qu'on le décide</div>
+            <div class="tl-text">
+              Mai, c'est le mois où on est devenus une habitude l'un pour l'autre. Pas encore quelque chose de nommé — mais quelque chose de réel. Elle prenait des nouvelles. Je prenais des nouvelles. On se souhaitait bonne nuit. On se demandait si l'autre avait bien dormi. On inventait des raisons de continuer à parler. <em>Et au fond, la vraie raison, on la connaissait déjà tous les deux.</em>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-label">À retenir de ce mois</div>
+        <div class="detail-value">
+          Des messages matin, midi et soir. Des « coucouu » devenus rituels. Monsieur et Madame comme prénoms secrets. Un <em>« t'es canon »</em> échangé en boucle. La question — <em>on se dit comment bonjour au lycée ?</em> — sans réponse encore, mais déjà une promesse.
+        </div>
+      </div>
+
+      <div class="page-note">✦ &nbsp; Juin approche. Le bac aussi. Et quelque chose d'autre encore.</div>
+    </section>
+
+    <!-- CHAPITRE IV : JUIN 2026 -->
+    <section class="page" id="ch4">
+      <div class="page-eyebrow">Chapitre IV</div>
+      <div class="page-month">Juin 2026</div>
+      <h2 class="page-title">Enfin nous</h2>
+      <div class="page-divider"></div>
+
+      <p class="page-intro">
+        Juin a été trop riche pour tout en garder la trace. On s'est parlé sans s'arrêter — des messages, des vidéos, un peu d'amour glissé dans chaque échange. Le bac est arrivé, et elle était là. Puis sont venues les premières vraies sorties, celles où on cesse de se demander si l'autre ressent la même chose, parce qu'on le sait déjà. <em>Trois mois à se parler, et puis enfin, tout devient réel.</em>
+      </p>
+
+      <div class="highlight">
+        <p class="highlight-text">
+          « On s'est fait beaucoup de bisous, calins et des je t'aimes. Ca y est on était enfin en couple. Après 3 mois où on parlait. »
+        </p>
+      </div>
+
+      <div class="timeline" style="margin-top: 2.5rem;">
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">Début juin</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Le bac, et elle à mes côtés</div>
+            <div class="tl-text">
+              Début juin, mon bac s'est bien passé. Elle était là pour me soutenir, du début à la fin. On se parlait beaucoup trop ce mois-là — tellement qu'il est impossible de tout retracer. Des messages sans fin, des vidéos, un peu d'amour glissé dans chaque échange. <em>On se rapprochait, sans même s'en rendre compte vraiment.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">21 juin</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Le cinéma, à trois</div>
+            <div class="tl-text">
+              Dimanche 21 juin, première vraie sortie : le cinéma, avec un ami à moi. On regarde <em>Backrooms</em>, puis on file manger au McDo de Saint-Genis. Je te raccompagne chez toi le soir. Et là, un message arrive — tu me dis que tu as vraiment aimé la soirée. Un petit message, mais je sais que je ne l'oublierai jamais.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">22 juin</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Le bowling, et une vidéo pendant le jeu</div>
+            <div class="tl-text">
+              Sur l'élan de la veille, je te propose le bowling pour le lendemain soir. Tu acceptes. Pour ne pas faire un bowling à deux qui se termine trop vite, j'amène un autre ami, Giovanni. Pendant que je joue, tu m'envoies une petite vidéo d'amour. Tu joues très bien au début, puis un peu moins bien — <em>parce que tu étais encore tombée sous mon charme, je crois bien.</em> On part ensuite à Vénissieux pour boire quelque chose, mais à 21h30 presque tout est fermé. Je te raccompagne chez toi le soir, et tu m'écris un message très semblable à celui de la veille. J'étais heureux.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">27 juin<br/>19h40 → 20h00</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Le jour J : fleurs, doudous, et un coucher de soleil</div>
+            <div class="tl-text">
+              J'avais dit à mon ami que je ferais ma déclaration le samedi 27. Ce jour-là, je dépose un petit colis à Carrefour, puis je vais acheter des fleurs et des doudous — en prenant le temps de retirer les pétales mortes. J'arrive à Chaponnay vers 19h40, mais tu m'avais dit 20h, alors j'attends. À 20h je viens te chercher, je fais vite connaissance avec ta mère, puis on part manger des pizzas à Montagny, sous un coucher de soleil. On nous pique notre place par un autre couple arrivé en même temps, alors on s'installe ailleurs, à même pas 200 mètres. Tu prends une pizza indienne, moi une forestière — on en mange chacun la moitié. Je t'offre les fleurs et les doudous sur place. Je voulais t'embrasser, mais je n'ai pas eu le courage. <em>Je t'ai fait un câlin à la place.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">27→28 juin<br/>Minuit</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">La nuit chez toi</div>
+            <div class="tl-text">
+              On décide que je dorme chez toi. Ma mère, un peu mise devant le fait accompli, me dit oui. Je n'avais pris qu'un caleçon — pas de pyjama. On arrive chez toi vers minuit, et on attend ta famille, partie à une fête de village à Toussieu. Ils rentrent, nous ouvrent, on pose nos affaires. On discute avec Kévin, ton oncle, jusqu'à 1h30 du matin. Je vais me doucher, tu me prêtes d'anciens habits pour faire office de pyjama. Je croise ta tante, venue préparer le biberon du bébé — un peu désorientée de me voir là, en pleine nuit. On va se coucher. <em>Je fais une nuit blanche, ou presque — 30 minutes de sommeil, pas plus.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">28 juin</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div><div class="tl-vline"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">Enfin en couple</div>
+            <div class="tl-text">
+              Cette nuit-là, beaucoup de bisous, de câlins, et des je t'aime. <em>Ça y est, on était enfin en couple. Après trois mois où on ne faisait que se parler.</em> Le lendemain midi, je mange chez toi et je découvre plus clairement ta famille. L'après-midi, on joue à un jeu avec ta mère — je finis deuxième sur trois, ta mère première. Mais ce n'est pas la place qui compte, c'est le moment partagé. Je pars de chez vous vers 17h30 et j'arrive chez moi à 18h.
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-left">
+            <div class="tl-date">30 juin</div>
+            <div class="tl-line-wrap"><div class="tl-dot special"></div></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-title">On se promet de se revoir vite</div>
+            <div class="tl-text">
+              On s'est juré de se revoir très vite. Mais je commence à travailler le 1er juillet, et ça allait être compliqué. Finalement, le 30 juin, on décide de se voir le jeudi 2 juillet après le travail. Je finis à 19h15, donc le temps d'arriver chez toi, ce sera 20h. Au moment où j'écris ces lignes — le 30, à 15h — je reçois une notification : on ira au restaurant. <em>Je n'ai tout simplement pas les mots.</em> C'est ainsi que se termine juin. J'espère rajouter plein d'autres choses pour le mois de juillet ! Je t'aime, Maelyse.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-label">À retenir de ce mois</div>
+        <div class="detail-value">
+          Un bac réussi, soutenu par elle. Un cinéma, un bowling, deux messages presque identiques envoyés après chaque soirée. Des fleurs, des doudous, un câlin à la place d'un baiser. Une nuit blanche chez elle, et enfin — <em>« on était en couple »</em> — après trois mois à se parler sans se le dire.
+        </div>
+      </div>
+
+      <div class="page-note">✦ &nbsp; Et la suite ne fait que commencer.</div>
+    </section>
+
+
+  </main>
+</div>
+
 <script>
+  // ---- LOGIN GATE ----
+  // Laisse vide ["" ] pour accepter n'importe quel prénom,
+  // ou mets un prénom précis (insensible à la casse/accents) pour verrouiller l'accès.
+  const ALLOWED_NAMES = ["maelyse"]; // ex: ["maelyse"]
 
-/* ==========================================================
-   ⚙️  CONFIGURATION EMAILJS — À REMPLIR UNE SEULE FOIS
-   ----------------------------------------------------------
-   1. Créer un compte gratuit sur https://www.emailjs.com
-   2. Ajouter un "Email Service" (Gmail, Outlook…) → copier le Service ID
-   3. Créer un "Email Template" → copier le Template ID
-      Variables disponibles dans le template :
-        {{prenom}}, {{nom}}, {{telephone}}, {{email}},
-        {{marque_vehicule}}, {{modele_annee}}, {{prestation}},
-        {{disponibilites}}, {{message}}
-   4. Dans Account > API Keys → copier la Public Key
-   ========================================================== */
-const EMAILJS_PUBLIC_KEY  = 'VOTRE_PUBLIC_KEY';   // ex : "user_Abc123XYZ"
-const EMAILJS_SERVICE_ID  = 'VOTRE_SERVICE_ID';   // ex : "service_sk_auto"
-const EMAILJS_TEMPLATE_ID = 'VOTRE_TEMPLATE_ID';  // ex : "template_rdv_sk"
-
-// Initialisation EmailJS
-emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-
-/* ---------- Burger menu ---------- */
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
-burger.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  burger.classList.toggle('active');
-  burger.setAttribute('aria-expanded', isOpen);
-});
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  navLinks.classList.remove('open');
-  burger.classList.remove('active');
-}));
-
-/* ---------- Opening hours logic ---------- */
-const HOURS = {
-  weekday: [[8*60,12*60],[14*60,19*60]],
-  saturday: [[8*60,14*60]],
-  sunday: []
-};
-const DAY_NAMES = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
-
-function fmt(mins){
-  const h = Math.floor(mins/60).toString().padStart(2,'0');
-  const m = (mins%60).toString().padStart(2,'0');
-  return h + 'h' + (m === '00' ? '' : m);
-}
-function rangesForDay(day){
-  if(day === 0) return HOURS.sunday;
-  if(day === 6) return HOURS.saturday;
-  return HOURS.weekday;
-}
-function rangesLabel(ranges){
-  if(!ranges.length) return 'Fermé';
-  return ranges.map(r => fmt(r[0]) + ' – ' + fmt(r[1])).join(' / ');
-}
-function updateStatus(){
-  const now = new Date();
-  const day = now.getDay();
-  const mins = now.getHours()*60 + now.getMinutes();
-  const ranges = rangesForDay(day);
-  const isOpen = ranges.some(([s,e]) => mins >= s && mins < e);
-
-  const pill = document.getElementById('status-pill');
-  const text = document.getElementById('status-text');
-  pill.classList.toggle('open', isOpen);
-  pill.classList.toggle('closed', !isOpen);
-  text.textContent = isOpen ? 'Ouvert' : 'Fermé';
-
-  const label = rangesLabel(ranges);
-  document.getElementById('today-hours').textContent = label;
-  document.getElementById('contact-today').textContent = DAY_NAMES[day] + ' · ' + label;
-}
-function buildHoursTable(){
-  const today = new Date().getDay();
-  const order = [1,2,3,4,5,6,0];
-  const wrap = document.getElementById('hours-table');
-  wrap.innerHTML = order.map(d => {
-    const ranges = rangesForDay(d);
-    const isToday = d === today;
-    return '<div class="hours-row' + (isToday ? ' today' : '') + '">' +
-      '<span class="day">' + DAY_NAMES[d] + '</span>' +
-      '<span class="time">' + rangesLabel(ranges) + '</span>' +
-    '</div>';
-  }).join('');
-}
-updateStatus();
-buildHoursTable();
-setInterval(updateStatus, 60000);
-
-/* ---------- RDV Form — EmailJS ---------- */
-document.getElementById('form-submit-btn').addEventListener('click', async () => {
-  const prenom  = document.getElementById('f-prenom').value.trim();
-  const nom     = document.getElementById('f-nom').value.trim();
-  const tel     = document.getElementById('f-tel').value.trim();
-  const marque  = document.getElementById('f-marque').value.trim();
-  const message = document.getElementById('f-message').value.trim();
-
-  if (!prenom || !nom || !tel || !marque || !message) {
-    alert('Merci de remplir les champs obligatoires (*).');
-    return;
+  function normalize(str) {
+    return str.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 
-  const btn = document.getElementById('form-submit-btn');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Envoi en cours…';
+  function tryLogin() {
+    const input = document.getElementById('loginName');
+    const name = input.value.trim();
+    const errorEl = document.getElementById('loginError');
 
-  const templateParams = {
-    prenom,
-    nom,
-    telephone:       document.getElementById('f-tel').value,
-    email:           document.getElementById('f-email').value,
-    marque_vehicule: marque,
-    modele_annee:    document.getElementById('f-modele').value,
-    prestation:      document.getElementById('f-service').value,
-    disponibilites:  document.getElementById('f-dispo').value,
-    message,
-  };
+    if (!name) {
+      errorEl.classList.add('show');
+      input.focus();
+      return;
+    }
+    if (ALLOWED_NAMES.length && !ALLOWED_NAMES.includes(normalize(name))) {
+      errorEl.classList.add('show');
+      input.value = '';
+      input.focus();
+      return;
+    }
 
-  try {
-    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
-    showSuccess();
-  } catch (err) {
-    console.error('EmailJS error:', err);
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Envoyer ma demande';
-    alert('Une erreur est survenue lors de l\'envoi. Appelez-nous directement au 06 61 27 28 93.');
+    errorEl.classList.remove('show');
+    document.getElementById('login').classList.add('hidden');
+    startMusic();
+
+    setTimeout(() => {
+      document.getElementById('login').style.display = 'none';
+    }, 850);
   }
-});
 
-function showSuccess() {
-  document.getElementById('rdv-form-inner').style.display = 'none';
-  const s = document.getElementById('form-success');
-  s.style.display = 'flex';
-}
-
-/* ---------- Testimonial carousel ---------- */
-const track = document.getElementById('testiTrack');
-const cards = Array.from(track.children);
-const dotsWrap = document.getElementById('testiDots');
-let perView = window.innerWidth >= 980 ? 3 : window.innerWidth >= 640 ? 2 : 1;
-let pageCount = Math.ceil(cards.length / perView);
-let current = 0;
-
-function buildDots(){
-  dotsWrap.innerHTML = '';
-  pageCount = Math.ceil(cards.length / perView);
-  for(let i=0;i<pageCount;i++){
-    const d = document.createElement('div');
-    d.className = 'testi-dot' + (i===current ? ' active' : '');
-    d.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(d);
-  }
-}
-function goTo(i){
-  current = (i + pageCount) % pageCount;
-  const targetIndex = current * perView;
-  const card = cards[Math.min(targetIndex, cards.length-1)];
-  track.scrollTo({left: card.offsetLeft, behavior:'smooth'});
-  Array.from(dotsWrap.children).forEach((d,idx) => d.classList.toggle('active', idx===current));
-}
-document.getElementById('testiNext').addEventListener('click', () => goTo(current+1));
-document.getElementById('testiPrev').addEventListener('click', () => goTo(current-1));
-buildDots();
-
-let autoplay = setInterval(() => goTo(current+1), 5500);
-function pauseAutoplay(){ clearInterval(autoplay); }
-track.addEventListener('mouseenter', pauseAutoplay);
-track.addEventListener('touchstart', pauseAutoplay, {passive:true});
-
-window.addEventListener('resize', () => {
-  const newPerView = window.innerWidth >= 980 ? 3 : window.innerWidth >= 640 ? 2 : 1;
-  if(newPerView !== perView){ perView = newPerView; current = 0; buildDots(); }
-});
-
-/* ---------- GSAP animations ---------- */
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from('.hero-text > *', {y:22, opacity:0, duration:0.7, stagger:0.12, ease:'power2.out', delay:0.1});
-gsap.from('.ticket-wrap', {y:36, opacity:0, duration:0.8, ease:'power3.out', delay:0.3});
-gsap.from('.stamp', {scale:1.8, opacity:0, rotate:6, duration:0.6, delay:0.9, ease:'back.out(2.6)'});
-
-document.querySelectorAll('.reveal').forEach(el => {
-  gsap.to(el, {
-    opacity:1, y:0, duration:0.7, ease:'power2.out',
-    scrollTrigger:{trigger:el, start:'top 88%'}
+  document.getElementById('loginName').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') tryLogin();
   });
-});
-gsap.set('.reveal', {y:20});
 
-document.querySelectorAll('.stat-num[data-target]').forEach(el => {
-  const target = parseFloat(el.dataset.target);
-  const decimals = parseInt(el.dataset.decimals || '0');
-  const obj = {val:0};
-  ScrollTrigger.create({
-    trigger:el, start:'top 90%', once:true,
-    onEnter:() => gsap.to(obj, {
-      val:target, duration:1.3, ease:'power2.out',
-      onUpdate:() => { el.textContent = decimals ? obj.val.toFixed(decimals).replace('.',',') : Math.round(obj.val); }
-    })
-  });
-});
-
-gsap.utils.toArray('.svc-card').forEach((card,i) => {
-  gsap.from(card, {
-    y:24, opacity:0, duration:0.6, ease:'power2.out', delay:(i%3)*0.08,
-    scrollTrigger:{trigger:card, start:'top 90%'}
-  });
-});
-
-let lastScroll = window.scrollY;
-const headerEl = document.querySelector('header');
-window.addEventListener('scroll', () => {
-  const cur = window.scrollY;
-  if(cur > lastScroll && cur > 140){
-    gsap.to(headerEl, {yPercent:-100, duration:0.3, ease:'power2.out'});
-  } else {
-    gsap.to(headerEl, {yPercent:0, duration:0.3, ease:'power2.out'});
+  // ---- MUSIC ----
+  function startMusic() {
+    const audio = document.getElementById('bgm');
+    const toggle = document.getElementById('audio-toggle');
+    audio.volume = 0.35;
+    audio.play().catch(() => {
+      // autoplay bloqué malgré le clic : on laisse le bouton flottant pour lancer manuellement
+    });
+    toggle.classList.add('visible');
   }
-  lastScroll = cur;
-}, {passive:true});
+
+  function toggleAudio() {
+    const audio = document.getElementById('bgm');
+    const toggle = document.getElementById('audio-toggle');
+    if (audio.paused) {
+      audio.play().catch(() => {});
+      toggle.textContent = '♪';
+      toggle.classList.remove('muted');
+    } else {
+      audio.pause();
+      toggle.textContent = '✕';
+      toggle.classList.add('muted');
+    }
+  }
+
+  function openBook() {
+    document.getElementById('cover').classList.add('hidden');
+    const book = document.getElementById('book');
+    book.style.display = 'flex';
+    requestAnimationFrame(() => book.classList.add('visible'));
+    setTimeout(observePages, 600);
+  }
+
+  function goTo(id) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function observePages() {
+    const pages = document.querySelectorAll('.page');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          const idx = [...pages].indexOf(e.target);
+          navItems.forEach(n => n.classList.remove('active'));
+          navItems[idx]?.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    pages.forEach(p => observer.observe(p));
+  }
 </script>
 </body>
 </html>
